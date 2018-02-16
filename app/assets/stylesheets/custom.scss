@@ -1,0 +1,126 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  padding-top: 54px;
+}
+
+/*flash*/
+.alert-error {
+    background-color: red;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: green;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    background-color: green;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+ .edit-user {
+    margin-bottom: 100px;
+ }
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #212529;
+}
+
+
+
+.instructions {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+label .help {
+  font-size: 14px;
+}
+
+.blue {
+ color: #276ebe;
+}
+
+.box {
+  transition: box-shadow .3s;
+  margin: 50px;
+  border-radius:10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  float: left;
+  
+}
+.box:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+
+
+ .main {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    z-index: 999999;
+
+}
+
+#project_description {
+  height: 300px;
+}
+
+#project_pitch {
+  height: 300px;
+}
+
+.showcase {
+  background-image: url("http://blairoracle.com/wp-content/uploads/2017/12/6360558186414264051368652572_Computing_programming_and_coding_in_schools.jpg");
+ 
+  /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+canvas {display: block;}
+
+ @media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}

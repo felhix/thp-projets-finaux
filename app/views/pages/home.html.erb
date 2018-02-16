@@ -1,0 +1,43 @@
+<div class="row">
+<% if user_signed_in? %>
+	<% @projects.each do |post| %>
+  <div class="col-sm-6  my-3">
+    <div class="card p-2 box">
+      <div class="card-block">
+        <h4 class="card-title blue">
+          <strong>
+            <%= post.title%>
+            </strong>
+          </h4>
+        <hr>
+          <p>
+            <%= post.short_description %>
+          </p> 
+        <small class="text-muted">
+          Project by: 
+          <strong>
+            <em>
+             <%= "#{post.user.first_name.capitalize!} #{post.user.last_name.capitalize!}" %>   
+              <% if current_user.id == post.user_id %>
+              <a href="<%= edit_project_path(post) %>" class="float-right">Edit project</a>
+              <% end %>
+              </em>
+          </strong>
+        </small>
+        <a href="<%= show_project_path(post) %>" class="btn btn-block btn-outline-primary my-3">
+          View project
+        </a>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <% else %>
+  	<div class="card card-body bg-light" style="margin-top: 100px;">
+     <h3 class="text-center">The Final Projects</h3>
+     <hr>
+
+    <%= link_to "Hack in", new_user_session_path, class: "btn btn-primary btn-block"  %>
+     	
+		</div>
+<% end %>
+</div>

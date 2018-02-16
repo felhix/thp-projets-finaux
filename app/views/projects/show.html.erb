@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-md-12">
+		<h2 class="text-center">
+			<strong>
+			<%= @project.title %>
+			</strong>
+		</h2>
+		<hr>
+		
+		<%= markdown(@project.description) %>
+		
+				<p>
+					Project by: 
+          <strong>
+            <em>
+             <%= "#{@project.user.first_name.capitalize!} #{@project.user.last_name.capitalize!}" %>   
+           </em>
+						</strong>
+				</p>
+				
+       <% if user_signed_in? && current_user.id == @project.user_id %>
+      <a href="<%= edit_project_path(@project) %>" class="btn btn-md btn-success float-left">Edit project</a>
+         <%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-md btn-danger float-right'  %>
+      <% end %>
+	</div>
+</div>
