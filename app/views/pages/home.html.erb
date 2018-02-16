@@ -8,8 +8,13 @@
           <strong>
             <%= post.title%>
             </strong>
+            <% if current_user.id == post.user_id %>
+            <small class="text-muted">
+              <a href="<%= edit_project_path(post) %>" class="float-right my-2" style="font-size: 11px;">Edit project</a>
+            </small>
+              <% end %>
           </h4>
-        <hr>
+        <hr class="my-3">
           <p>
             <%= post.short_description %>
           </p> 
@@ -18,15 +23,14 @@
           <strong>
             <em>
              <%= "#{post.user.first_name.capitalize!} #{post.user.last_name.capitalize!}" %>   
-              <% if current_user.id == post.user_id %>
-              <a href="<%= edit_project_path(post) %>" class="float-right">Edit project</a>
-              <% end %>
-              </em>
+              </em> 
           </strong>
         </small>
-        <a href="<%= show_project_path(post) %>" class="btn btn-block btn-outline-primary my-3">
+       <%= is_approved?(post) %>
+        <a href="<%= show_project_path(post) %>" class="btn btn-block btn-outline-primary my-4">
           View project
         </a>
+
       </div>
     </div>
   </div>
