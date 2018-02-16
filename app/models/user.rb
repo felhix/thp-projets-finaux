@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+	has_and_belongs_to_many :project_registrations, class_name: "Project"
+
 	has_one :project, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

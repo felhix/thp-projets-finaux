@@ -2,23 +2,22 @@
 <% if user_signed_in? %>
 	<% @projects.each do |post| %>
   <div class="col-sm-6  my-3">
-    <div class="card p-2 box">
+    <div class="card home p-2 box">
       <div class="card-block">
         <h4 class="card-title blue">
           <strong>
-            <%= post.title%>
+            <%= post.title %>
             </strong>
-            <% if current_user.id == post.user_id %>
-            <small class="text-muted">
-              <a href="<%= edit_project_path(post) %>" class="float-right my-2" style="font-size: 11px;">Edit project</a>
-            </small>
-              <% end %>
           </h4>
         <hr class="my-3">
-          <p>
+          <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+            <p>
             <%= post.short_description %>
-          </p> 
-        <small class="text-muted">
+            </p> 
+
+             <small class="text-muted">
           Project by: 
           <strong>
             <em>
@@ -26,7 +25,11 @@
               </em> 
           </strong>
         </small>
-       <%= is_approved?(post) %>
+              <%= is_approved?(post) %>
+              </div>
+          </div>
+          </div>
+       
         <a href="<%= show_project_path(post) %>" class="btn btn-block btn-outline-primary my-4">
           View project
         </a>

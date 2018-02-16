@@ -50,23 +50,96 @@
 			</div>
 		</div>
 
+			<% if @project.users.count > 0 %>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 my-3">
+					<h3 class="text-center my-3">
+						<strong>
+							Inscriptions 
+							<span class="badge badge-pill badge-info">
+								<%= @project.users.count %>
+							</span> 
+						</strong>
+					</h3>
+
+							<table class="table table-hover">
+							  <thead>
+							    <tr>
+										<th scope="col">#</th>
+							      <th scope="col">Prénom</th>
+							      <th scope="col">Nom</th>
+							      <th scope="col">Email</th>
+							      <% if current_user.id == @project.user_id %>
+											<th scope="col">Action</th>
+							      <% end %>
+							    </tr>
+							  </thead>
+							  <tbody>
+							  <% @project.users.each_with_index do |user, index| %> 
+							    <tr class="table-default">
+							      <th scope="row"><%= index += 1 %></th>
+							      <td><%= user.first_name.capitalize! %></td>
+							      <td><%= user.last_name.capitalize! %></td>
+							      <td><%= user.email %></td>
+							       <% if current_user.id == @project.user_id %>
+							    		  <td>
+			    		  					<%= form_tag(project_creator_unregister_user_path) do %>
+														<%= submit_tag("Unregister user from project", class: 'btn btn-block btn-danger') %>
+														<% end %>
+							    		  </td>
+							       <% end %>
+							    </tr>
+							    <% end %> 
+							    </tbody>
+							</table> 
+					</div>
+				</div>
+			</div>	
+			<% end %>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 my-3">
+				<% unless @project.users.include? current_user %>
+					<%= form_tag(project_registration_path) do %>
+						<%= submit_tag("Register to project", class: 'btn btn-block btn-primary') %>
+						<% end %>
+					<% else %>
+						<% if current_user.id == @project.user_id %>
+									<span class="btn btn-block btn-outline-primary">
+									En tant que créateur du projet vous devez participer
+								</span>
+						<% else %>
+					<%= form_tag(project_unregister_path) do %>
+						<%= submit_tag("Unregister from project", class: 'btn btn-block btn-danger') %>
+						<% end %>
+					<% end %>
+					<% end %>
+					</div>
+			</div>
+		</div>
+
+		
+
 			<div class="card card-outline-primary mb-3 text-center">
   <div class="card-block">
     <blockquote class="card-blockquote my-3">
       <div class="gravatar text-center">
       		<%= gravatar_for @project.user, size: 80 %>
       	</div>
-      <footer class="my-3">Project by: <cite title="Source Title">
+     		 <footer class="my-3">Project by: <cite title="Source Title">
       	 <%= "#{@project.user.first_name.capitalize!} #{@project.user.last_name.capitalize!}" %>   
-      </cite></footer>
-    </blockquote>
+	      </cite>
+	   		 </footer>
+   		 </blockquote>
        <% if user_signed_in? && current_user.id == @project.user_id %>
-      <a href="<%= edit_project_path(@project) %>" class="btn btn-md btn-success float-left my-3" style="margin-left:15px;">Edit project</a>
+      <a href="<%= edit_project_path(@project) %>" class="btn btn-md btn-outline-success float-left my-3" style="margin-left:15px;">Edit project</a>
       <span style="margin-right:15px;>
-         <%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-md btn-danger float-right my-3'  %>
+         <%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-md btn-outline-danger float-right my-3'  %>
          </span>
       <% end %>
-  </div>
-</div>
+  		</div>
+		</div>
 	</div>
 </div>
