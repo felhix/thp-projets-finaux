@@ -7,7 +7,7 @@
         par <%= comment.user.first_name.capitalize! %> 
       </small>
       <% if current_user.id == comment.user.id %>
-        <%= link_to "Delete", comment_path(comment),
+        <%= link_to "Delete", comment_path(comment),remote: true,
                         method: :delete, data: { confirm: "Are you sure?" }, class: 'nested-form' %> 
         <% end %>                
         <div class="panel-group">

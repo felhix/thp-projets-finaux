@@ -33111,3 +33111,1146 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:37:39 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.7ms)
+  Rendered users/sessions/new.html.erb within layouts/application (134.6ms)
+  Rendered includes/_head.html.erb (7044.2ms)
+  Rendered includes/_main_navigation.html.erb (696.2ms)
+Completed 401 Unauthorized in 7954ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `current_page' for #<#<Class:0x0000557f1d58fce0>:0x0000557f1d586a78>
+Did you mean?  current_page?):
+     7:     </button>
+     8:     <div class="collapse navbar-collapse" id="navbarResponsive">
+     9:       <ul class="navbar-nav ml-auto">
+    10:         <% unless current_page(root_path) %>
+    11:         <li class="nav-item active">
+    12:           <%= link_to "Home", root_path, class: 'nav-link' %>
+    13:         </li>
+  
+app/views/includes/_main_navigation.html.erb:10:in `_app_views_includes__main_navigation_html_erb__3133053747514058226_69922216042580'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___1283792015301391956_47002220693240'
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:37:50 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (6.7ms)
+  Rendered includes/_head.html.erb (41.9ms)
+  Rendered includes/_main_navigation.html.erb (651.1ms)
+Completed 401 Unauthorized in 710ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `current_page' for #<#<Class:0x0000557f1d58fce0>:0x00007f3012b8bbd8>
+Did you mean?  current_page?):
+     7:     </button>
+     8:     <div class="collapse navbar-collapse" id="navbarResponsive">
+     9:       <ul class="navbar-nav ml-auto">
+    10:         <% unless current_page(root_path) %>
+    11:         <li class="nav-item active">
+    12:           <%= link_to "Home", root_path, class: 'nav-link' %>
+    13:         </li>
+  
+app/views/includes/_main_navigation.html.erb:10:in `_app_views_includes__main_navigation_html_erb__3133053747514058226_69922206394480'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___1283792015301391956_69922223508460'
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:38:02 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (12.9ms)
+  Rendered includes/_head.html.erb (43.6ms)
+  Rendered includes/_main_navigation.html.erb (2.6ms)
+  Rendered includes/_flash_messages.html.erb (1.0ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 19:38:07 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/partials/_welcome.html.erb (1.5ms)
+  Rendered pages/home.html.erb within layouts/application (4.8ms)
+  Rendered includes/_head.html.erb (44.4ms)
+  Rendered includes/_main_navigation.html.erb (1.5ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 90ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:38:09 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (10.1ms)
+  Rendered includes/_head.html.erb (40.2ms)
+  Rendered includes/_main_navigation.html.erb (2.5ms)
+  Rendered includes/_flash_messages.html.erb (0.9ms)
+  Rendered includes/_footer.html.erb (1.0ms)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:38:36 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/registrations/new.html.erb within layouts/application (9.9ms)
+  Rendered includes/_head.html.erb (49.8ms)
+  Rendered includes/_main_navigation.html.erb (1.6ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 74ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:38:41 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.6ms)
+  Rendered includes/_head.html.erb (44.4ms)
+  Rendered includes/_main_navigation.html.erb (2.4ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.8ms)
+Completed 200 OK in 68ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:38:58 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.0ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.4ms)
+  Rendered includes/_head.html.erb (60.1ms)
+  Rendered includes/_main_navigation.html.erb (1.6ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (1.1ms)
+Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:39:24 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (16.1ms)
+  Rendered includes/_head.html.erb (51.6ms)
+  Rendered includes/_main_navigation.html.erb (1.6ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:40:06 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (7.7ms)
+  Rendered includes/_head.html.erb (48.6ms)
+  Rendered includes/_main_navigation.html.erb (1.9ms)
+  Rendered includes/_flash_messages.html.erb (1.7ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 19:40:36 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/partials/_welcome.html.erb (1.1ms)
+  Rendered pages/home.html.erb within layouts/application (3.3ms)
+  Rendered includes/_head.html.erb (48.6ms)
+  Rendered includes/_main_navigation.html.erb (2.1ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (1.2ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:41:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (8.9ms)
+  Rendered includes/_head.html.erb (62.0ms)
+  Rendered includes/_main_navigation.html.erb (2.4ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.7ms)
+Completed 200 OK in 89ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:41:37 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.0ms)
+  Rendered users/sessions/new.html.erb within layouts/application (9.2ms)
+  Rendered includes/_head.html.erb (5445.9ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 5470ms (Views: 5468.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:41:46 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (10.4ms)
+  Rendered includes/_head.html.erb (42.3ms)
+  Rendered includes/_main_navigation.html.erb (1.4ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (1.0ms)
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 19:41:47 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/partials/_welcome.html.erb (1.4ms)
+  Rendered pages/home.html.erb within layouts/application (4.0ms)
+  Rendered includes/_head.html.erb (46.1ms)
+  Rendered includes/_main_navigation.html.erb (1.2ms)
+  Rendered includes/_flash_messages.html.erb (1.1ms)
+  Rendered includes/_footer.html.erb (1.3ms)
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:41:50 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.2ms)
+  Rendered includes/_head.html.erb (32.0ms)
+  Rendered includes/_main_navigation.html.erb (1.1ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:41:51 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (9.2ms)
+  Rendered includes/_head.html.erb (41.9ms)
+  Rendered includes/_main_navigation.html.erb (2.4ms)
+  Rendered includes/_flash_messages.html.erb (0.9ms)
+  Rendered includes/_footer.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:41:53 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.0ms)
+  Rendered includes/_head.html.erb (33.6ms)
+  Rendered includes/_main_navigation.html.erb (1.1ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 19:42:00 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/partials/_welcome.html.erb (2.0ms)
+  Rendered pages/home.html.erb within layouts/application (4.1ms)
+  Rendered includes/_head.html.erb (36.2ms)
+  Rendered includes/_main_navigation.html.erb (1.9ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:42:02 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.4ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.7ms)
+  Rendered includes/_head.html.erb (32.4ms)
+  Rendered includes/_main_navigation.html.erb (1.4ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:42:03 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.6ms)
+  Rendered users/sessions/new.html.erb within layouts/application (6.0ms)
+  Rendered includes/_head.html.erb (36.0ms)
+  Rendered includes/_main_navigation.html.erb (2.4ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:43:24 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (10.6ms)
+  Rendered includes/_head.html.erb (39.3ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 19:43:25 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/partials/_welcome.html.erb (0.9ms)
+  Rendered pages/home.html.erb within layouts/application (3.2ms)
+  Rendered includes/_head.html.erb (62.6ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 79ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:43:27 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (11.5ms)
+  Rendered includes/_head.html.erb (38.5ms)
+  Rendered includes/_main_navigation.html.erb (1.8ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:43:28 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (8.2ms)
+  Rendered includes/_head.html.erb (44.6ms)
+  Rendered includes/_main_navigation.html.erb (2.7ms)
+  Rendered includes/_flash_messages.html.erb (2.1ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:43:29 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (7.9ms)
+  Rendered includes/_head.html.erb (42.5ms)
+  Rendered includes/_main_navigation.html.erb (1.7ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 19:43:30 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/partials/_welcome.html.erb (0.7ms)
+  Rendered pages/home.html.erb within layouts/application (3.1ms)
+  Rendered includes/_head.html.erb (51.8ms)
+  Rendered includes/_main_navigation.html.erb (2.1ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:43:32 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (9.6ms)
+  Rendered includes/_head.html.erb (39.7ms)
+  Rendered includes/_main_navigation.html.erb (2.5ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 19:43:34 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/partials/_welcome.html.erb (2.1ms)
+  Rendered pages/home.html.erb within layouts/application (6.1ms)
+  Rendered includes/_head.html.erb (73.2ms)
+  Rendered includes/_main_navigation.html.erb (1.6ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.6ms)
+Completed 200 OK in 95ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:46:11 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (11.4ms)
+  Rendered includes/_head.html.erb (58.8ms)
+  Rendered includes/_main_navigation.html.erb (1.7ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 126ms (Views: 124.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2018-02-17 19:46:41 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (12.4ms)
+  Rendered includes/_head.html.erb (52.4ms)
+  Rendered includes/_main_navigation.html.erb (2.6ms)
+  Rendered includes/_flash_messages.html.erb (0.9ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:46:42 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (4.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (16.5ms)
+  Rendered includes/_head.html.erb (70.1ms)
+  Rendered includes/_main_navigation.html.erb (5.0ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 110ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 19:55:41 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (8.4ms)
+  Rendered includes/_head.html.erb (45.2ms)
+  Rendered includes/_main_navigation.html.erb (2.3ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-02-17 19:55:47 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AbZSJ/mNmikkOgHV6J9ZN4DEL+o3zi8SEW1BARItg3tgU1TgDEPpaazonmHbcXzLrBtOrpzvdSXFdZ+LtIUW3w==", "user"=>{"email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (99.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "dvddcrz@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (14.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-17 18:55:48.177102"], ["sign_in_count", 2], ["updated_at", "2018-02-17 18:55:48.202831"], ["id", 1]]
+  [1m[35m (91.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 827ms (ActiveRecord: 206.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 19:55:48 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (28.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/partials/_projects.html.erb (135.0ms)
+  Rendered pages/home.html.erb within layouts/application (163.7ms)
+  Rendered includes/_head.html.erb (48.8ms)
+  Rendered includes/_main_navigation.html.erb (1.6ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 243ms (Views: 191.4ms | ActiveRecord: 30.6ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 19:55:51 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (2.8ms)
+  Rendered projects/partials/_project_body.html.erb (15.1ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_project_registration_count.html.erb (85.8ms)
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 3], ["id", 1], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (56.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_user_registration_table.html.erb (6.1ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (57.3ms)
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_reply.html.erb (5.6ms)
+  Rendered comments/_template.html.erb (79.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (5.9ms)
+  Rendered projects/show.html.erb within layouts/application (381.0ms)
+  Rendered includes/_head.html.erb (49.1ms)
+  Rendered includes/_main_navigation.html.erb (2.5ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 570ms (Views: 442.8ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2018-02-17 19:55:55 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tcWFzWG1m6VwCKyUnJXU6FOmRTnI2GOUDkhXGhwyH8O0BXw++9ysXAl+Es0Yf1Qd5SG+wJVZhezwiSjOzvDJA==", "comment"=>{"commentable_id"=>"3", "commentable_type"=>"Project", "body"=>"papa"}, "commit"=>"Comment"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? ORDER BY "comments"."rgt" DESC LIMIT ?[0m  [["commentable_id", 3], ["commentable_type", "Project"], ["LIMIT", 1]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? ORDER BY "comments"."rgt" DESC LIMIT ?[0m  [["commentable_id", 3], ["commentable_type", "Project"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "comments" ("commentable_id", "commentable_type", "body", "user_id", "lft", "rgt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["commentable_id", 3], ["commentable_type", "Project"], ["body", "papa"], ["user_id", 1], ["lft", 1], ["rgt", 2], ["created_at", "2018-02-17 18:55:55.972157"], ["updated_at", "2018-02-17 18:55:55.972157"]]
+  [1m[35m (141.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/project/3
+Completed 302 Found in 162ms (ActiveRecord: 143.6ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 19:55:56 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (2.4ms)
+  Rendered projects/partials/_project_body.html.erb (1.0ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_project_registration_count.html.erb (4.2ms)
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 3], ["id", 1], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (5.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_user_registration_table.html.erb (3.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (2.8ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (1.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 8]]
+  Rendered comments/_reply.html.erb (5.4ms)
+  Rendered comments/_reply.html.erb (14.3ms)
+  Rendered comments/_template.html.erb (26.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (4.3ms)
+  Rendered projects/show.html.erb within layouts/application (54.9ms)
+  Rendered includes/_head.html.erb (36.6ms)
+  Rendered includes/_main_navigation.html.erb (2.8ms)
+  Rendered includes/_flash_messages.html.erb (1.0ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 109ms (Views: 99.7ms | ActiveRecord: 5.0ms)
+
+
+Started DELETE "/comments/8" for 127.0.0.1 at 2018-02-17 19:56:00 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ? [0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" >= 1) AND ("comments"."lft" < 2) AND ("comments"."id" != 8)[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "comments" SET "lft" = ("lft" - 2) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" > 2) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "comments" SET "rgt" = ("rgt" - 2) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."rgt" > 2) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 8]]
+  [1m[35m (69.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/project/3
+Completed 200 OK in 95ms (ActiveRecord: 73.6ms)
+
+
+Started DELETE "/comments/8" for 127.0.0.1 at 2018-02-17 19:56:04 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Comment with 'id'=8):
+  
+app/controllers/comments_controller.rb:19:in `destroy'
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 19:56:12 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (3.4ms)
+  Rendered projects/partials/_project_body.html.erb (1.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_project_registration_count.html.erb (6.0ms)
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 3], ["id", 1], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (6.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_user_registration_table.html.erb (7.1ms)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (1.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_reply.html.erb (2.4ms)
+  Rendered comments/_template.html.erb (14.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (4.2ms)
+  Rendered projects/show.html.erb within layouts/application (51.8ms)
+  Rendered includes/_head.html.erb (43.2ms)
+  Rendered includes/_main_navigation.html.erb (1.4ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.6ms)
+Completed 200 OK in 115ms (Views: 101.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 19:57:43 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (1.9ms)
+  Rendered projects/partials/_project_body.html.erb (0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_project_registration_count.html.erb (3.8ms)
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 3], ["id", 1], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (4.4ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_user_registration_table.html.erb (6.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (1.5ms)
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_reply.html.erb (5.1ms)
+  Rendered comments/_template.html.erb (13.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (2.6ms)
+  Rendered projects/show.html.erb within layouts/application (43.4ms)
+  Rendered includes/_head.html.erb (45.0ms)
+  Rendered includes/_main_navigation.html.erb (2.5ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 104ms (Views: 96.1ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2018-02-17 19:57:48 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLq7naERk9/U+Jalu2CQei4UnS2LS4LXs3MP9QjPTQi8vbh6b3g3ADEdTFzdczp5+M6Cwm49hU5QiAoKW4RGUw==", "comment"=>{"commentable_id"=>"3", "commentable_type"=>"Project", "body"=>"mfokdmkgfdkgmkmokmk"}, "commit"=>"Comment"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? ORDER BY "comments"."rgt" DESC LIMIT ?[0m  [["commentable_id", 3], ["commentable_type", "Project"], ["LIMIT", 1]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? ORDER BY "comments"."rgt" DESC LIMIT ?[0m  [["commentable_id", 3], ["commentable_type", "Project"], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "comments" ("commentable_id", "commentable_type", "body", "user_id", "lft", "rgt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["commentable_id", 3], ["commentable_type", "Project"], ["body", "mfokdmkgfdkgmkmokmk"], ["user_id", 1], ["lft", 1], ["rgt", 2], ["created_at", "2018-02-17 18:57:48.756435"], ["updated_at", "2018-02-17 18:57:48.756435"]]
+  [1m[35m (178.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/project/3
+Completed 302 Found in 200ms (ActiveRecord: 180.9ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 19:57:48 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (1.7ms)
+  Rendered projects/partials/_project_body.html.erb (1.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_project_registration_count.html.erb (4.9ms)
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 3], ["id", 1], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (6.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_user_registration_table.html.erb (3.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (1.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 9]]
+  Rendered comments/_reply.html.erb (3.3ms)
+  Rendered comments/_reply.html.erb (10.2ms)
+  Rendered comments/_template.html.erb (22.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (4.7ms)
+  Rendered projects/show.html.erb within layouts/application (55.2ms)
+  Rendered includes/_head.html.erb (39.3ms)
+  Rendered includes/_main_navigation.html.erb (2.3ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 111ms (Views: 103.3ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/comments/9" for 127.0.0.1 at 2018-02-17 19:57:56 +0100
+Processing by CommentsController#destroy as JS
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ? [0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" >= 1) AND ("comments"."lft" < 2) AND ("comments"."id" != 9)[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "comments" SET "lft" = ("lft" - 2) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" > 2) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "comments" SET "rgt" = ("rgt" - 2) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."rgt" > 2) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 9]]
+  [1m[35m (91.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/project/3
+Completed 200 OK in 118ms (ActiveRecord: 96.3ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 19:58:02 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (2.5ms)
+  Rendered projects/partials/_project_body.html.erb (0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_project_registration_count.html.erb (2.9ms)
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 3], ["id", 1], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (5.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_user_registration_table.html.erb (4.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (1.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_reply.html.erb (3.3ms)
+  Rendered comments/_template.html.erb (11.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (2.4ms)
+  Rendered projects/show.html.erb within layouts/application (40.9ms)
+  Rendered includes/_head.html.erb (40.6ms)
+  Rendered includes/_main_navigation.html.erb (1.5ms)
+  Rendered includes/_flash_messages.html.erb (1.5ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 100ms (Views: 93.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 20:15:03 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (2.9ms)
+  Rendered projects/partials/_project_body.html.erb (2.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_project_registration_count.html.erb (8.9ms)
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 3], ["id", 1], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (3.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_user_registration_table.html.erb (4.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (3.7ms)
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_reply.html.erb (4.3ms)
+  Rendered comments/_template.html.erb (18.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (5.2ms)
+  Rendered projects/show.html.erb within layouts/application (55.0ms)
+  Rendered includes/_head.html.erb (38.0ms)
+  Rendered includes/_main_navigation.html.erb (3.0ms)
+  Rendered includes/_flash_messages.html.erb (0.9ms)
+  Rendered includes/_footer.html.erb (0.8ms)
+Completed 200 OK in 196ms (Views: 104.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2018-02-17 20:15:06 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `for' for #<Devise::ParameterSanitizer:0x00007f301195df38>):
+  
+app/controllers/application_controller.rb:8:in `configure_devise_parameters'
+Started GET "/settings" for 127.0.0.1 at 2018-02-17 20:15:26 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (12.9ms)
+  Rendered includes/_head.html.erb (36.4ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (1.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 111ms (Views: 85.9ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:15:31 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DFVHMTzac2lRmbBlxRPKgaq7lJRW1IB6Sx51PtTSMX7kUkTW8rPXtrR8apyjAGCCfGGLe7Oih+Oo5XDBh5k6JQ==", "user"=>{"first_name"=>"davida", "last_name"=>"dacrue", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :current_password
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (6.6ms)
+  Rendered includes/_head.html.erb (36.7ms)
+  Rendered includes/_main_navigation.html.erb (1.8ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 334ms (Views: 55.0ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:15:36 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eODCp1zTYAoR3H3yK7/2+ip4R3iq1hBwiqKuf1kzTuCQ58FAkrrE1fQ5pwtNrFz5/KJYl0+gF+lpWauACnhFuw==", "user"=>{"first_name"=>"davida", "last_name"=>"dacrue", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :current_password
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (5.3ms)
+  Rendered includes/_head.html.erb (36.2ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.8ms)
+Completed 200 OK in 308ms (Views: 52.2ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:15:44 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4neytL5h1U4i6mwTHV+niXX8OPBuQTkGve6pf7DfCMsKcLFTcAhxkccPtup7TA2KoyYnH4s3Pp9eFayA45QDkA==", "user"=>{"first_name"=>"davida", "last_name"=>"dacrue", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :current_password
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (7.4ms)
+  Rendered includes/_head.html.erb (35.6ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 313ms (Views: 51.9ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:16:19 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4neytL5h1U4i6mwTHV+niXX8OPBuQTkGve6pf7DfCMsKcLFTcAhxkccPtup7TA2KoyYnH4s3Pp9eFayA45QDkA==", "user"=>{"first_name"=>"davida", "last_name"=>"dacrue", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "first_name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first_name", "davida"], ["updated_at", "2018-02-17 19:16:19.533178"], ["id", 1]]
+  [1m[35m (85.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 379ms (ActiveRecord: 88.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 20:16:19 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/partials/_projects.html.erb (28.5ms)
+  Rendered pages/home.html.erb within layouts/application (31.5ms)
+  Rendered includes/_head.html.erb (35.1ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 95ms (Views: 75.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2018-02-17 20:16:24 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (6.8ms)
+  Rendered includes/_head.html.erb (42.5ms)
+  Rendered includes/_main_navigation.html.erb (2.1ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (2.0ms)
+Completed 200 OK in 68ms (Views: 64.8ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:16:33 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qmBS6Rvi3++R6vuGebUm5bM851Oc8QtCkwWFep/5UGFCZ1EO1Yt7MHQPIX8fpozmZeb4vHmHDNtw/oCFzLJbOg==", "user"=>{"first_name"=>"davide", "last_name"=>"dacrue", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (5.3ms)
+  Rendered includes/_head.html.erb (38.3ms)
+  Rendered includes/_main_navigation.html.erb (1.6ms)
+  Rendered includes/_flash_messages.html.erb (0.9ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 312ms (Views: 55.7ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:16:40 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x8n2PctPhCjFthInOYFivm8QFYk+ZxHE1fA4f07t2l8vzvXaBSYg9yBTyN5fksi9ucoKZtsRFl02Cz2AHabRBA==", "user"=>{"first_name"=>"davide", "last_name"=>"dacrue", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (7.6ms)
+  Rendered includes/_head.html.erb (35.3ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 328ms (Views: 52.9ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:16:45 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j1KaEQzLP4/POXUnR6r723KKrYelc+3dmE1Eji03NOhnVZn2wqKbUCrcr94huVHYpFCyaEAF6kR7tkFxfnw/sw==", "user"=>{"first_name"=>"davide", "last_name"=>"dacrue", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "first_name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first_name", "davide"], ["updated_at", "2018-02-17 19:16:46.151315"], ["id", 1]]
+  [1m[35m (82.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 344ms (ActiveRecord: 83.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 20:16:46 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/partials/_projects.html.erb (14.3ms)
+  Rendered pages/home.html.erb within layouts/application (17.9ms)
+  Rendered includes/_head.html.erb (41.5ms)
+  Rendered includes/_main_navigation.html.erb (1.4ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 66.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2018-02-17 20:16:51 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (10.7ms)
+  Rendered includes/_head.html.erb (43.6ms)
+  Rendered includes/_main_navigation.html.erb (2.6ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 71ms (Views: 66.5ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:17:01 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HNE62wHU9B4IzM8bjbDXgCf2V2r3vtWXpJdNNKKG1zj01jk8z71Qwe0pFeLro32D8SxIhRLI0g5HbEjL8c3cYw==", "user"=>{"first_name"=>"david", "last_name"=>"dacruz", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (8.5ms)
+  Rendered includes/_head.html.erb (39.6ms)
+  Rendered includes/_main_navigation.html.erb (1.9ms)
+  Rendered includes/_flash_messages.html.erb (1.1ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 334ms (Views: 58.9ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:17:08 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5FG2x82sm4uYOU+6G/GUfJUifA1JIDe0B7KRWPvP7AsMVrUgA8U/VH3clUN94j5/Q/hj4qxWMC3kSZSnqITnUA==", "user"=>{"first_name"=>"david", "last_name"=>"dacruz", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "first_name" = ?, "last_name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first_name", "david"], ["last_name", "dacruz"], ["updated_at", "2018-02-17 19:17:08.324117"], ["id", 1]]
+  [1m[35m (110.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 376ms (ActiveRecord: 111.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 20:17:08 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/partials/_projects.html.erb (12.6ms)
+  Rendered pages/home.html.erb within layouts/application (15.3ms)
+  Rendered includes/_head.html.erb (35.9ms)
+  Rendered includes/_main_navigation.html.erb (1.5ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2018-02-17 20:17:13 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (9.8ms)
+  Rendered includes/_head.html.erb (39.0ms)
+  Rendered includes/_main_navigation.html.erb (3.6ms)
+  Rendered includes/_flash_messages.html.erb (1.4ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 64.9ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:17:28 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w0UvTLpLoD6DCb+K//4Has4xj7PaqzX29vWvLYQHu9orQiyrdCIE4WbsZXOZ7a1pGOuQXD/dMm8VDqrS10ywgQ==", "user"=>{"first_name"=>"david", "last_name"=>"dacruz", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "encrypted_password" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["encrypted_password", "$2a$11$Wi0LJmPRHHet4H0nCvXH0e21XlBkZtDlhWN4FEW7xg2WsyGen21iW"], ["updated_at", "2018-02-17 19:17:29.110622"], ["id", 1]]
+  [1m[35m (78.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 624ms (ActiveRecord: 80.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 20:17:29 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/partials/_projects.html.erb (12.0ms)
+  Rendered pages/home.html.erb within layouts/application (16.2ms)
+  Rendered includes/_head.html.erb (37.0ms)
+  Rendered includes/_main_navigation.html.erb (1.4ms)
+  Rendered includes/_flash_messages.html.erb (1.1ms)
+  Rendered includes/_footer.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2018-02-17 20:17:33 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (8.5ms)
+  Rendered includes/_head.html.erb (36.9ms)
+  Rendered includes/_main_navigation.html.erb (2.8ms)
+  Rendered includes/_flash_messages.html.erb (1.1ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 60.9ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:17:39 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X3sL7v1EyKNa+6MLKVwxJQJFZrrOPfgtoVFDfMz9hQO3fAgJMy1sfL8eefJPT5sm1J95VStL/7RCqkaDn7aOWA==", "user"=>{"first_name"=>"davide", "last_name"=>"dacruz", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (5.9ms)
+  Rendered includes/_head.html.erb (35.7ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 316ms (Views: 52.0ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:17:53 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8kmpX19PzV1WLf9cXwGp4WMOox6EwA9l+49jGi1MQZIaTqq4kSZpgrPIJaU5EgPitdS88WG2CPwYdGblfgdKyQ==", "user"=>{"first_name"=>"davide", "last_name"=>"dacruz", "email"=>"dvddcrz@gmail.c", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "dvddcrz@gmail.c"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (7.8ms)
+  Rendered includes/_head.html.erb (34.9ms)
+  Rendered includes/_main_navigation.html.erb (1.4ms)
+  Rendered includes/_flash_messages.html.erb (1.1ms)
+  Rendered includes/_footer.html.erb (1.0ms)
+Completed 200 OK in 327ms (Views: 53.8ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:18:04 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zr4jtrDR8vNG/ydl+zIu08tc7xVsCLNUKbLG68zzr+omuSBRfrhWLKMa/ZydIYTQHYbw+ol+tM3KScMUn7iksQ==", "user"=>{"first_name"=>"davide", "last_name"=>"dacruze", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "first_name" = ?, "last_name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first_name", "davide"], ["last_name", "dacruze"], ["updated_at", "2018-02-17 19:18:04.870078"], ["id", 1]]
+  [1m[35m (64.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 334ms (ActiveRecord: 66.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 20:18:04 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/partials/_projects.html.erb (16.5ms)
+  Rendered pages/home.html.erb within layouts/application (19.5ms)
+  Rendered includes/_head.html.erb (37.7ms)
+  Rendered includes/_main_navigation.html.erb (2.2ms)
+  Rendered includes/_flash_messages.html.erb (0.9ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 65.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/settings" for 127.0.0.1 at 2018-02-17 20:18:10 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (9.5ms)
+  Rendered includes/_head.html.erb (40.5ms)
+  Rendered includes/_main_navigation.html.erb (2.0ms)
+  Rendered includes/_flash_messages.html.erb (1.0ms)
+  Rendered includes/_footer.html.erb (1.0ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/" for 127.0.0.1 at 2018-02-17 20:18:17 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yqEYFTkyH9xCLYaO286DSpXkkf2r6tLlLedMLMnvKwkiphvy91u7A6fIXHe93SlJQz6OEk6c1XzOHEnTmqQgUg==", "user"=>{"first_name"=>"davidez", "last_name"=>"dacruze", "email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "first_name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first_name", "davidez"], ["updated_at", "2018-02-17 19:18:17.443176"], ["id", 1]]
+  [1m[35m (61.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 331ms (ActiveRecord: 62.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 20:18:17 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/partials/_projects.html.erb (10.0ms)
+  Rendered pages/home.html.erb within layouts/application (13.5ms)
+  Rendered includes/_head.html.erb (38.9ms)
+  Rendered includes/_main_navigation.html.erb (2.2ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.6ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 1.6ms)
+
+
