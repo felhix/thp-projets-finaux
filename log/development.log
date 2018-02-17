@@ -13344,3 +13344,972 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 87ms (Views: 79.6ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 01:40:30 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (85.6ms)
+  Rendered includes/_head.html.erb (438.7ms)
+  Rendered includes/_main_navigation.html.erb (1.5ms)
+  Rendered includes/_flash_messages.html.erb (1.1ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 654ms (Views: 556.6ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/project/unregister/3" for 127.0.0.1 at 2018-02-17 01:40:38 +0100
+Processing by ProjectsController#unregister as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3WqCRHMe4LRJEwVAtkAGVeuwAhSKhjmValcwpssw/23+qvtmmbgp0xBT8BXGFhWOJUUquv1AEY1t20yn8YMdEA==", "commit"=>"Unregister from project", "id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHABTM_Users Load (0.1ms)[0m  [1m[34mSELECT "projects_users".* FROM "projects_users" WHERE "projects_users"."project_id" = ? AND "projects_users"."user_id" = 1[0m  [["project_id", 3]]
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "projects_users" WHERE "projects_users"."project_id" = ? AND "projects_users"."user_id" = 1[0m  [["project_id", 3]]
+  [1m[35m (102.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/project/3
+Completed 302 Found in 131ms (ActiveRecord: 106.0ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 01:40:38 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (24.5ms)
+  Rendered includes/_head.html.erb (84.8ms)
+  Rendered includes/_main_navigation.html.erb (1.5ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 127ms (Views: 117.2ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/project/registration/3" for 127.0.0.1 at 2018-02-17 01:40:48 +0100
+Processing by ProjectsController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fkI0qbJE1oq6xX7C6rfKyNekIakUvJc0JKHOdsT5BY9dgk2LWOIf7eOFi5ea4dkTGVEJB2N6vywjLbJ3/krn8g==", "commit"=>"Register to project", "id"=>"3"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "projects_users" ("user_id", "project_id") VALUES (?, ?)[0m  [["user_id", 1], ["project_id", 3]]
+  [1m[35m (88.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/project/3
+Completed 302 Found in 110ms (ActiveRecord: 91.2ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 01:40:48 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (18.8ms)
+  Rendered includes/_head.html.erb (54.1ms)
+  Rendered includes/_main_navigation.html.erb (1.8ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 89ms (Views: 83.2ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-02-17 01:40:54 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nkHo4+aqGWMB3bdrKEG9VjRdA3S2oKcJ2jyWlO0l4Wa9gZHBDAzQBFidQj5YF66N+qgr2sFmjxHdsOqV15YDGw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:40:54 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (6.9ms)
+  Rendered includes/_head.html.erb (42.9ms)
+  Rendered includes/_main_navigation.html.erb (3.7ms)
+  Rendered includes/_flash_messages.html.erb (1.2ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 01:40:59 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (29.2ms)
+  Rendered includes/_head.html.erb (47.5ms)
+  Rendered includes/_main_navigation.html.erb (1.5ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.6ms)
+Completed 200 OK in 92ms (Views: 90.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-02-17 01:41:06 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3sdqmwM/Qe+RUfVZIrURJBrcYFP1YIoZfueKwiZoMGI7tTkZbXcWq6Nx0mhbK0PptNO58bp8Rh2ku2PfxP4A1g==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-17 00:41:06.361930"], ["sign_in_count", 2], ["updated_at", "2018-02-17 00:41:06.363644"], ["id", 3]]
+  [1m[35m (62.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 357ms (ActiveRecord: 64.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:41:06 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered pages/home.html.erb within layouts/application (10.2ms)
+  Rendered includes/_head.html.erb (42.5ms)
+  Rendered includes/_main_navigation.html.erb (1.4ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 65.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 01:41:08 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (26.9ms)
+  Rendered includes/_head.html.erb (44.6ms)
+  Rendered includes/_main_navigation.html.erb (2.3ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 88ms (Views: 81.1ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/project/registration/3" for 127.0.0.1 at 2018-02-17 01:41:17 +0100
+Processing by ProjectsController#register as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ebfbWXtmSvWbSIms/W0bKeTrirPjGNv9ruupScU8iAm2BFgbfY7Vhr2V6meoKwwSHFn/xZOP4yiSsyzvNtoWAA==", "commit"=>"Register to project", "id"=>"3"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "projects_users" ("user_id", "project_id") VALUES (?, ?)[0m  [["user_id", 3], ["project_id", 3]]
+  [1m[35m (104.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/project/3
+Completed 302 Found in 123ms (ActiveRecord: 105.6ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 01:41:17 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (15.1ms)
+  Rendered includes/_head.html.erb (45.3ms)
+  Rendered includes/_main_navigation.html.erb (2.2ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.7ms)
+Completed 200 OK in 79ms (Views: 73.1ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-02-17 01:42:52 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"osXbx6Mq/SHO51VRSk5RLQSqC95i6c/Rb81/R9cfLaioehr81VkAER3UKeQmvrWftUzoDuJ0g9ptRJBD6MAEBg=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 74ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:42:52 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (5.5ms)
+  Rendered includes/_head.html.erb (388.6ms)
+  Rendered includes/_main_navigation.html.erb (1.6ms)
+  Rendered includes/_flash_messages.html.erb (2.1ms)
+  Rendered includes/_footer.html.erb (1.1ms)
+Completed 200 OK in 424ms (Views: 414.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 01:42:54 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.4ms)
+  Rendered users/sessions/new.html.erb within layouts/application (49.1ms)
+  Rendered includes/_head.html.erb (71.4ms)
+  Rendered includes/_main_navigation.html.erb (2.4ms)
+  Rendered includes/_flash_messages.html.erb (0.9ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 140ms (Views: 137.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-02-17 01:43:00 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QTC/KQHZlEfWzAqIJ1ZXopGB2ugUbDdvnz2xWaKJxJJetx++OQxU4EMlrk2NeX88BbMrviuuzBHKIz4R7P1n1w==", "user"=>{"email"=>"toto@toto.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "toto@toto.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-17 00:43:01.046770"], ["sign_in_count", 2], ["updated_at", "2018-02-17 00:43:01.049290"], ["id", 2]]
+  [1m[35m (67.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 372ms (ActiveRecord: 69.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:43:01 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered pages/home.html.erb within layouts/application (65.4ms)
+  Rendered includes/_head.html.erb (37.1ms)
+  Rendered includes/_main_navigation.html.erb (2.7ms)
+  Rendered includes/_flash_messages.html.erb (1.1ms)
+  Rendered includes/_footer.html.erb (0.8ms)
+Completed 200 OK in 119ms (Views: 114.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 01:43:03 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (42.0ms)
+  Rendered includes/_head.html.erb (38.7ms)
+  Rendered includes/_main_navigation.html.erb (1.5ms)
+  Rendered includes/_flash_messages.html.erb (1.1ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 109ms (Views: 97.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 01:43:46 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (21.6ms)
+  Rendered includes/_head.html.erb (48.0ms)
+  Rendered includes/_main_navigation.html.erb (2.3ms)
+  Rendered includes/_flash_messages.html.erb (2.1ms)
+  Rendered includes/_footer.html.erb (0.6ms)
+Completed 200 OK in 93ms (Views: 85.4ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/project/unregister/3/user/3" for 127.0.0.1 at 2018-02-17 01:44:57 +0100
+Processing by ProjectsController#project_creator_unregister_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P+FQEC5M6LUTYmwmfWmGYBQVdGZy+Z7z526Qbtgipj1IDWRMF/14GnxEpVNIpVU6eJ8Y70Bb753De5wBlZ/AvQ==", "user_id"=>"1", "commit"=>"Unregister user from project", "id"=>"3"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHABTM_Users Load (0.3ms)[0m  [1m[34mSELECT "projects_users".* FROM "projects_users" WHERE "projects_users"."project_id" = ? AND "projects_users"."user_id" = 1[0m  [["project_id", 3]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "projects_users" WHERE "projects_users"."project_id" = ? AND "projects_users"."user_id" = 1[0m  [["project_id", 3]]
+  [1m[35m (88.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/project/3
+Completed 302 Found in 109ms (ActiveRecord: 91.4ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 01:44:57 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (15.1ms)
+  Rendered includes/_head.html.erb (41.2ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (1.3ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 70.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/project/unregister/3/user/3" for 127.0.0.1 at 2018-02-17 01:45:02 +0100
+Processing by ProjectsController#project_creator_unregister_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rf1FdGhD2pjjCfW2wwADw4fakGpYoJHkZ5BOs9QVcNoyEXEoUfJKN4wvPMP2zNCZ61D842oC4IpDhULcmagWWg==", "user_id"=>"2", "commit"=>"Unregister user from project", "id"=>"3"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/project/3
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 01:45:02 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (17.2ms)
+  Rendered includes/_head.html.erb (44.2ms)
+  Rendered includes/_main_navigation.html.erb (2.0ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 76ms (Views: 70.1ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/project/unregister/3/user/3" for 127.0.0.1 at 2018-02-17 01:45:05 +0100
+Processing by ProjectsController#project_creator_unregister_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UVabYjST53dUtrH/amLKUqiYzGZIZwbG0NU3POgMaMcmuq8+DSJ32DuQeIpfrhkIxBKg73rFd6j0wDtTpbEORw==", "user_id"=>"3", "commit"=>"Unregister user from project", "id"=>"3"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mHABTM_Users Load (0.2ms)[0m  [1m[34mSELECT "projects_users".* FROM "projects_users" WHERE "projects_users"."project_id" = ? AND "projects_users"."user_id" = 3[0m  [["project_id", 3]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "projects_users" WHERE "projects_users"."project_id" = ? AND "projects_users"."user_id" = 3[0m  [["project_id", 3]]
+  [1m[35m (223.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/project/3
+Completed 302 Found in 238ms (ActiveRecord: 225.4ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 01:45:05 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (24.9ms)
+  Rendered includes/_head.html.erb (42.8ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.8ms)
+Completed 200 OK in 89ms (Views: 76.9ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-02-17 01:45:12 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WsV5JK5QGeZSw38r21Dcbt3czyMKhZjDCCfc6mYTcbItKU14l+GJST3ltl7unA80sVajqjgn6a0sMtCFK64XMg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:45:12 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  Rendered includes/_head.html.erb (49.0ms)
+  Rendered includes/_main_navigation.html.erb (1.2ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 01:45:15 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (9.0ms)
+  Rendered includes/_head.html.erb (42.2ms)
+  Rendered includes/_main_navigation.html.erb (1.2ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-02-17 01:45:20 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TluvXDUtdMOzg+kloYBwiG7xwi4onyOqKPwoHfOUp+aQpsx7ZnnSCaMB8ws9Qmi5gHmzLAguAJfOsa2XFIE/Xg==", "user"=>{"email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "dvddcrz@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-17 00:45:20.598351"], ["last_sign_in_at", "2018-02-17 00:13:25.279059"], ["sign_in_count", 4], ["updated_at", "2018-02-17 00:45:20.600390"], ["id", 1]]
+  [1m[35m (67.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 352ms (ActiveRecord: 68.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:45:20 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered pages/home.html.erb within layouts/application (11.2ms)
+  Rendered includes/_head.html.erb (40.2ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.6ms)
+Completed 200 OK in 66ms (Views: 62.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:45:23 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (23.8ms)
+  Rendered includes/_head.html.erb (41.3ms)
+  Rendered includes/_main_navigation.html.erb (1.9ms)
+  Rendered includes/_flash_messages.html.erb (1.4ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 86ms (Views: 78.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:51:47 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (2.5ms)
+Completed 401 Unauthorized in 105ms (ActiveRecord: 3.4ms)
+
+
+  
+SyntaxError (/home/david/Desktop/thp-final-projects/app/views/projects/show.html.erb:142: syntax error, unexpected tIVAR, expecting ')'
+@output_buffer.safe_append='         </span>
+              ^):
+  
+app/views/projects/show.html.erb:142: syntax error, unexpected tIVAR, expecting ')'
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:52:50 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (6.3ms)
+Completed 401 Unauthorized in 129ms (ActiveRecord: 3.3ms)
+
+
+  
+SyntaxError (/home/david/Desktop/thp-final-projects/app/views/projects/show.html.erb:142: syntax error, unexpected tIVAR, expecting ')'
+@output_buffer.safe_append='         </span>
+              ^):
+  
+app/views/projects/show.html.erb:142: syntax error, unexpected tIVAR, expecting ')'
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:52:54 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (2.0ms)
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/david/Desktop/thp-final-projects/app/views/projects/show.html.erb:142: syntax error, unexpected tIVAR, expecting ')'
+@output_buffer.safe_append='         </span>
+              ^):
+  
+app/views/projects/show.html.erb:142: syntax error, unexpected tIVAR, expecting ')'
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:53:29 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (47.9ms)
+  Rendered includes/_head.html.erb (370.7ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 431ms (Views: 425.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:54:18 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (12.8ms)
+  Rendered includes/_head.html.erb (44.9ms)
+  Rendered includes/_main_navigation.html.erb (1.7ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 68.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:54:38 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (12.5ms)
+  Rendered includes/_head.html.erb (39.6ms)
+  Rendered includes/_main_navigation.html.erb (1.2ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 60.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:55:56 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (11.1ms)
+  Rendered includes/_head.html.erb (35.0ms)
+  Rendered includes/_main_navigation.html.erb (1.2ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 54.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:56:45 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (11.6ms)
+  Rendered includes/_head.html.erb (38.3ms)
+  Rendered includes/_main_navigation.html.erb (2.0ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.6ms)
+Completed 200 OK in 71ms (Views: 61.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:58:04 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (20.2ms)
+  Rendered includes/_head.html.erb (58.5ms)
+  Rendered includes/_main_navigation.html.erb (1.8ms)
+  Rendered includes/_flash_messages.html.erb (0.9ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 102ms (Views: 93.0ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-02-17 01:58:15 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ny/p08e2CJXBrcr3YrvLnvs/VXthcEE90vlTocjpVXX3W18iJDNniWMKWXrAOR25XrFYMQHBzJ7dCOGZ0ybe5A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 26ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:58:15 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.8ms)
+  Rendered includes/_head.html.erb (38.7ms)
+  Rendered includes/_main_navigation.html.erb (1.1ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 01:58:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (28.2ms)
+  Rendered includes/_head.html.erb (35.7ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-02-17 01:58:24 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0nbJtzA5bqlpWyLgVzV4dNuSO1nApYNyfoMsIPT0nqam6Qoo2Wrl3G/Ij3GRUdsl9zuCZqtoaJdUWyG9wbPWcA==", "user"=>{"email"=>"toto@toto.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "toto@toto.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-17 00:58:24.322582"], ["last_sign_in_at", "2018-02-17 00:43:01.046770"], ["sign_in_count", 3], ["updated_at", "2018-02-17 00:58:24.324436"], ["id", 2]]
+  [1m[35m (55.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 356ms (ActiveRecord: 57.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:58:24 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered pages/home.html.erb within layouts/application (9.9ms)
+  Rendered includes/_head.html.erb (38.6ms)
+  Rendered includes/_main_navigation.html.erb (2.5ms)
+  Rendered includes/_flash_messages.html.erb (2.5ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 66.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 01:58:26 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (2.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (28.7ms)
+  Rendered includes/_head.html.erb (50.0ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 96ms (Views: 87.2ms | ActiveRecord: 4.9ms)
+
+
+Started DELETE "/projects/3" for 127.0.0.1 at 2018-02-17 01:58:32 +0100
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tL7W9d6XsULd8kgdX8B5ZK/oZGDipbGCo/Q8PFRInOnzULZn7Mm2q+M+CFKIlKjsjYGgZ9X9xHzO/kDZ02pBdw==", "id"=>"3"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "projects_users" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 3]]
+  [1m[35m (104.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 118ms (ActiveRecord: 107.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:58:32 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered pages/home.html.erb within layouts/application (7.4ms)
+  Rendered includes/_head.html.erb (43.8ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (1.0ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:59:18 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered pages/home.html.erb within layouts/application (8.3ms)
+  Rendered includes/_head.html.erb (42.3ms)
+  Rendered includes/_main_navigation.html.erb (1.2ms)
+  Rendered includes/_flash_messages.html.erb (1.2ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 66ms (Views: 62.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:59:19 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (13.9ms)
+  Rendered includes/_head.html.erb (48.5ms)
+  Rendered includes/_main_navigation.html.erb (2.2ms)
+  Rendered includes/_flash_messages.html.erb (0.9ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 82ms (Views: 74.3ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-02-17 01:59:29 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"71sxMrp4ITnmDozN0p+88FnMNqTeMOXoIuj8Y7I51SyNRHTWaXW6hwdgal5Wktz9SCHGQhtdmFb50nKnGtVDCg=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:59:29 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  Rendered includes/_head.html.erb (41.2ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-02-17 01:59:31 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.3ms)
+  Rendered users/sessions/new.html.erb within layouts/application (9.4ms)
+  Rendered includes/_head.html.erb (51.2ms)
+  Rendered includes/_main_navigation.html.erb (1.2ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-02-17 01:59:35 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vkc1UvOrhY2r5nxAWXL3nGe2HMulgp6AkEtKVgrk4xEOHjV5N4ER6Zqih/b3Kop0lGr+eSKOI1RHXayPHtHi3Q==", "user"=>{"email"=>"dvddcrz@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "dvddcrz@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-02-17 00:59:35.491365"], ["last_sign_in_at", "2018-02-17 00:45:20.598351"], ["sign_in_count", 5], ["updated_at", "2018-02-17 00:59:35.493129"], ["id", 1]]
+  [1m[35m (51.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 314ms (ActiveRecord: 52.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 01:59:35 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered pages/home.html.erb within layouts/application (7.0ms)
+  Rendered includes/_head.html.erb (42.6ms)
+  Rendered includes/_main_navigation.html.erb (2.2ms)
+  Rendered includes/_flash_messages.html.erb (2.4ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 01:59:37 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (25.7ms)
+  Rendered includes/_head.html.erb (46.6ms)
+  Rendered includes/_main_navigation.html.erb (1.8ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 84.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 02:00:00 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (12.9ms)
+  Rendered includes/_head.html.erb (38.5ms)
+  Rendered includes/_main_navigation.html.erb (2.1ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 59.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 02:00:17 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (18.1ms)
+  Rendered includes/_head.html.erb (54.6ms)
+  Rendered includes/_main_navigation.html.erb (3.0ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.6ms)
+Completed 200 OK in 89ms (Views: 81.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 02:00:39 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (11.7ms)
+  Rendered includes/_head.html.erb (60.5ms)
+  Rendered includes/_main_navigation.html.erb (1.4ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 95ms (Views: 86.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 02:00:54 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (18.5ms)
+  Rendered includes/_head.html.erb (47.5ms)
+  Rendered includes/_main_navigation.html.erb (1.4ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 75.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 02:02:34 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (12.7ms)
+  Rendered includes/_head.html.erb (45.6ms)
+  Rendered includes/_main_navigation.html.erb (2.4ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 78ms (Views: 69.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 02:03:00 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (16.3ms)
+  Rendered includes/_head.html.erb (55.6ms)
+  Rendered includes/_main_navigation.html.erb (2.2ms)
+  Rendered includes/_flash_messages.html.erb (1.0ms)
+  Rendered includes/_footer.html.erb (0.7ms)
+Completed 200 OK in 91ms (Views: 84.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/project/unregister/2/user/2" for 127.0.0.1 at 2018-02-17 02:03:14 +0100
+Processing by ProjectsController#project_creator_unregister_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t3L0TPDy/u6EFwIwxSO4DXVdoG/OSodSs8l/fA13VU7BZTVigN8W0YsSBW+kNCDqBe7d2sGln1txzygnncaDEQ==", "user_id"=>"1", "commit"=>"Unregister user from project", "id"=>"2"}
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/project/2
+Completed 302 Found in 9ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 02:03:14 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (11.5ms)
+  Rendered includes/_head.html.erb (50.8ms)
+  Rendered includes/_main_navigation.html.erb (1.5ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.9ms)
+Completed 200 OK in 82ms (Views: 75.4ms | ActiveRecord: 1.8ms)
+
+

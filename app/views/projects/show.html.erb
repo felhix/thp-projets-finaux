@@ -134,9 +134,10 @@
    		 </blockquote>
        <% if user_signed_in? && current_user.id == @project.user_id %>
       <a href="<%= edit_project_path(@project) %>" class="btn btn-md btn-outline-success float-left my-3" style="margin-left:15px;">Edit project</a>
-      <span style="margin-right:15px;>
-         <%= link_to "Delete", project_path(@project), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-md btn-outline-danger float-right my-3'  %>
-         </span>
+
+      <%= button_to "Delete", { action: "destroy", id: @project.id },
+                                method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-md btn-outline-danger float-right my-3 mr-3' %>
+
       <% end %>
   		</div>
 		</div>
