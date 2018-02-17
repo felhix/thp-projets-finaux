@@ -39,11 +39,11 @@ module ApplicationHelper
     @projects = Project.all
     @projects.each do |project|
       if project.approved
-        return '<span class="badge badge-pill badge-success">
+        return '<span class="badge badge-pill badge-success home-pill">
                         <strong>Validé</strong>
                       </span>'.html_safe
       else
-         return '<span class="badge badge-pill badge-warning">
+         return '<span class="badge badge-pill badge-warning home-pill">
                        <strong>Pas encore validé</strong>
                       </span>'.html_safe
       end  
