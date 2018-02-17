@@ -13,6 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+.card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: #fff!important;
+    border-top: 0px!important;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #fff!important;
+    border-bottom: 0px solid #fff!important;
+}
 // import scss file
 @import "bootswatch/yeti/variables";
 @import "bootstrap";

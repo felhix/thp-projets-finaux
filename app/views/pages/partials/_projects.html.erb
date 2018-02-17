@@ -1,21 +1,21 @@
+<div class="col-md-12 my-3">
 <% @projects.each do |post| %>
-  <div class="col-sm-8 offset-sm-2  my-3">
-    <div class="card home p-2 box">
-      <div class="card-block">
-        <h4 class="card-title blue">
-          <strong>
-            <%= post.title %>
-            </strong>
-          </h4>
-        <hr class="my-3">
-          <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-            <p>
-            <%= post.short_description %>
-            </p> 
-
-             <small class="text-muted">
+    <div class="card border-secondary mb-3 box" style="max-width: 20rem;">
+    <div class="card-header">
+      <%= post.title %>
+       <h4 class="card-title">
+        <%= home_page_is_approved?(post) %>
+      </h4>
+    </div>
+    <div class="card-body">
+     
+      <p class="card-text">
+        <%= post.short_description %>
+      </p>
+    </div>
+    <div class="card-footer text-muted">
+      <p>
+        <small>
           Project by: 
           <strong>
             <em>
@@ -23,16 +23,11 @@
               </em> 
           </strong>
         </small>
-              <%= is_approved?(post) %>
-              </div>
-          </div>
-          </div>
-       
-        <a href="<%= show_project_path(post) %>" class="btn btn-block btn-outline-primary my-4">
-          View project
-        </a>
-
-      </div>
+      </p>
+      <a href="<%= show_project_path(post) %>" class="btn btn-block btn-outline-primary">
+      View project
+      </a>
     </div>
-  </div>
-  <% end %>
+  </div>  
+<% end %>
+</div>

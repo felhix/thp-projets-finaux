@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+10.times do 
+
+	Project.create([
+			{ title: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'},
+			{ short_description: '' },
+			{ description: '' },
+			{ pitch: '' },
+			{ user_id: '' },
+			{ created_at: '' },
+			{ updated_at: '' },
+			])
+
+end
