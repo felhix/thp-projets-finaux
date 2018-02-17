@@ -123,7 +123,6 @@ label .help {
 }
 
 .comments-header {
-  border-bottom: 1px dotted gray;
   margin-bottom: 10px;
 }
 
@@ -143,7 +142,11 @@ label .help {
   }
 }
 
-
+.nested-form {
+  font-size: 10px;
+    font-weight: bold;
+    color: #888;
+}
 
 .comments-show {
   margin-left: 25px;

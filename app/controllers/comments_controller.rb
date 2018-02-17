@@ -5,14 +5,21 @@ class CommentsController < ApplicationController
     commentable = commentable_type.constantize.find(commentable_id)
     @comment = Comment.build_from(commentable, current_user.id, body)
 
-    respond_to do |format|
       if @comment.save
         make_child_comment
-        format.html  { redirect_back fallback_location: root_path, :success => 'Comment was successfully added.' }
+        flash[:success] = "Comment was successfully saved !"
+        redirect_back(fallback_location: root_path)
       else
-        format.html  { render :action => "new", :danger => 'Oops try again!' }
+        flash[:danger] = "Oops try again!"
+        redirect_back(fallback_location: root_path)
       end
-    end
+  end
+
+  
+  def destroy
+    @comment.destroy
+    flash[:danger] = "Project was successfully deleted !"
+    redirect_back(fallback_location: root_path)
   end
 
 

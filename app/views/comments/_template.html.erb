@@ -1,11 +1,25 @@
-<div class="comments-header">  
-  <h4>
-    <%= commentable.comment_threads.count == 0 ? "no" : commentable.comment_threads.count %> comments
-  </h4>
-</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="comments-header">  
+			  <h4>
+			    <%= commentable.comment_threads.count == 0 ? "0" : commentable.comment_threads.count %> 
+			    <% if commentable.comment_threads.count > 1 %>
+							commentaires
+					<% else %>
+						commentaire
+					<% end %>
+			  </h4>
+			</div>
+			
+				<div class="col-md-12"></div>
+			<%= render partial: "comments/form", locals: {new_comment: new_comment} %>
 
-<%= render partial: "comments/form", locals: {new_comment: new_comment} %>
-
-<div class="comments-container">  
-  <%= render partial: "comments/reply", locals: {comments: commentable.root_comments} %>
-</div> 
+			<div class="comments-container">  
+			  <%= render partial: "comments/reply", locals: {comments: commentable.root_comments} %>
+			</div>
+			</div>
+			</div>	
+			</div> 
+		</div>
+	</div>
