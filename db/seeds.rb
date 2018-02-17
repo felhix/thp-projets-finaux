@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+1.times do
 	Project.create([
-			{ title: 'Lorem ipsum dolor sit amet, consectetur cras amet.'},
-			{ short_description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...' },
-			{ description: '
+			 title: 'Lorem ok dolor sit amet, consectetur cras amet.',
+			 short_description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...' ,
+			 description: "
 						# Sine dedisset viso eadem contendere nurusque
 
 						## Petitur gravitate
@@ -70,8 +70,8 @@
 						ferre stabat Mnemonides, eritque ripam, hausto astra, at tamen aliqua haerebat
 						efflant comis.
 
-				' },
-			{ pitch: '
+				",
+			 pitch: "
 					# Sine dedisset viso eadem contendere nurusque
 
 					## Petitur gravitate
@@ -131,6 +131,7 @@
 					ferre stabat Mnemonides, eritque ripam, hausto astra, at tamen aliqua haerebat
 					efflant comis.
 
-					' },
-			{ user_id: '1' }
+					",
+			 user_id: 3
 			])
+end

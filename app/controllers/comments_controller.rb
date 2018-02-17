@@ -14,11 +14,11 @@ class CommentsController < ApplicationController
         redirect_back(fallback_location: root_path)
       end
   end
-
   
   def destroy
+    @comment = Comment.find(params[:id])
     @comment.destroy
-    flash[:danger] = "Project was successfully deleted !"
+    flash[:success] = "Comment was successfully deleted !"
     redirect_back(fallback_location: root_path)
   end
 
