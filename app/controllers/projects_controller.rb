@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
 		if @project.save
 			@project.users << current_user
 			flash[:success] = "Project was successfully saved !"
-			redirect_to show_project_path
+			redirect_to show_project_path(@project)
 		else
 			flash.now[:danger] = @project.errors.full_messages.to_sentence
 			render 'new'
@@ -31,6 +31,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def show
+		@new_comment = Comment.build_from(@project, current_user.id, "")
 	end
 
 	def new 

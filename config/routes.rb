@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   post "project/unregister/:id", to: "projects#unregister", as: 'project_unregister'
   post "project/unregister/:id/user/:id", to: "projects#project_creator_unregister_user", as: 'project_creator_unregister_user'
 
+  resources :comments
+
 end
