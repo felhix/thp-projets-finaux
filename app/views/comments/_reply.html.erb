@@ -9,6 +9,7 @@
       <% if current_user.id == comment.user.id %>
         <%= link_to "Delete", comment_path(comment),
                         method: :delete, data: { confirm: "Are you sure?" }, class: 'nested-form' %> 
+        <% end %>                
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading">
