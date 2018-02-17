@@ -12,6 +12,6 @@ Rails.application.routes.draw do
 
   post "project/registration/:id", to: "projects#register", as: 'project_registration'
   post "project/unregister/:id", to: "projects#unregister", as: 'project_unregister'
-  post "project/unregister/user/:id", to: "projects#project_creator_unregister_user", as: 'project_creator_unregister_user'
+  post "project/unregister/:id/user/:id", to: "projects#project_creator_unregister_user", as: 'project_creator_unregister_user'
 
 end

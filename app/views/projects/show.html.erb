@@ -50,7 +50,6 @@
 			</div>
 		</div>
 
-			<% if @project.users.count > 0 %>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 my-3">
@@ -85,7 +84,8 @@
 							       <% if current_user.id == @project.user_id %>
 							    		  <td>
 			    		  					<%= form_tag(project_creator_unregister_user_path) do %>
-														<%= submit_tag("Unregister user from project", class: 'btn btn-block btn-danger') %>
+			    		  					<%= hidden_field_tag "user_id", "#{user.id}" %>
+														<%= submit_tag("Unregister user from project", class: 'btn btn-block btn-outline-danger') %>
 														<% end %>
 							    		  </td>
 							       <% end %>
@@ -96,7 +96,6 @@
 					</div>
 				</div>
 			</div>	
-			<% end %>
 
 		<div class="container">
 			<div class="row">

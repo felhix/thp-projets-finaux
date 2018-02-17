@@ -14,7 +14,7 @@ class ProjectsController < ApplicationController
 		if @project.save
 			@project.users << current_user
 			flash[:success] = "Project was successfully saved !"
-			redirect_to root_path
+			redirect_to show_project_path
 		else
 			flash.now[:danger] = @project.errors.full_messages.to_sentence
 			render 'new'
@@ -47,7 +47,7 @@ class ProjectsController < ApplicationController
 
 	def update
 		if @project.update(project_params)
-			flash[:success] = "Post was successfully updated !"
+			flash[:success] = "Project was successfully updated !"
 			redirect_to root_path
 		else
 			flash.now[:danger] = @project.errors.full_messages.to_sentence
@@ -68,9 +68,9 @@ class ProjectsController < ApplicationController
 
  		def unregister
  			begin
- 			 @project.users.destroy(current_user)
- 			 flash[:success] = "Vous ne participez plus à #{@project.title} !" 
-	   	 redirect_to show_project_path
+ 			  @project.users.destroy(current_user)
+ 			  flash[:success] = "Vous ne participez plus à #{@project.title} !" 
+	   	  redirect_to show_project_path
 	   	rescue
 		    flash[:danger] = "Oops veuillez réessayer !" 
 		   	redirect_to show_project_path		  
@@ -78,21 +78,21 @@ class ProjectsController < ApplicationController
  		end	
 
 
-  def project_creator_unregister_user(user)
-    begin
-    	user = user.find(params[:id])
-    	if user.id != @project.user_id
-	      @project.users.destroy(user)
-	       flash[:success] = "Vous avez désinscris #{user.first_name.capitalize!} !" 
-	       redirect_to show_project_path
-      else 
-      	flash[:success] = "Vous ne pouvez pas vous désinscrire de votre projet !" 
-	       redirect_to show_project_path
-      end	
+  def project_creator_unregister_user
+  		begin
+	    	user = User.find(params[:user_id])
+	    	if user.id != @project.user_id
+		      @project.users.destroy(user)
+		       flash[:success] = "Vous avez désinscris #{user.first_name.capitalize!} !" 
+		       redirect_to show_project_path
+	      else 
+	      	flash[:danger] = "Vous ne pouvez pas vous désinscrire de votre projet !" 
+		       redirect_to show_project_path
+	      end	
       rescue
-        flash[:danger] = "Oops veuillez réessayer !" 
-        redirect_to show_project_path     
-      end  
+		    flash[:danger] = "Oops veuillez réessayer !" 
+		   	redirect_to show_project_path		  
+		  end  
   end  
 
 
