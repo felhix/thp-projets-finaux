@@ -1,0 +1,15 @@
+<% unless @project.users.include? current_user %>
+	<%= form_tag(project_registration_path) do %>
+		<%= submit_tag("Register to project", class: 'btn btn-block btn-primary') %>
+		<% end %>
+	<% else %>
+		<% if current_user.id == @project.user_id %>
+					<span class="btn btn-block btn-outline-primary">
+					En tant que créateur du projet vous devez participer
+				</span>
+		<% else %>
+	<%= form_tag(project_unregister_path) do %>
+		<%= submit_tag("Unregister from project", class: 'btn btn-block btn-danger') %>
+		<% end %>
+	<% end %>
+<% end %>

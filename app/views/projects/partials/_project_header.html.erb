@@ -1,0 +1,20 @@
+<span class="float-right" id="big">
+	 <%= is_approved?(@project) %>
+		</span>
+		<div class="row">
+		<h1>
+			<strong class="text-center">
+			<%= @project.title %>
+			</strong>
+		</h1>
+		</div>
+	</div>
+<div class="card text-white bg-info mb-3 text-center">
+<div class="card-block">
+  <blockquote class="card-blockquote my-3">
+    <p>
+			<%= @project.short_description %>
+    </p>
+  </blockquote>
+</div>
+</div>

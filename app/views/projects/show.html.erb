@@ -1,147 +1,27 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="container my-3">
-			<span class="float-right" id="big">
-			 <%= is_approved?(@project) %>
-				</span>
-				<div class="row">
-				<h1>
-					<strong class="text-center">
-					<%= @project.title %>
-					</strong>
-				</h1>
-				</div>
-			</div>
-		<div class="card text-white bg-info mb-3 text-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote my-3">
-      <p>
-				<%= @project.short_description %>
-      </p>
-      <footer>
-      	
-      </footer>
-    </blockquote>
-  </div>
-</div>
-		
-		<h4 class="text-center">
-			
-		</h4>
-
+		<%= render 'projects/partials/project_header' %>	
 		<div class="row">
-			<div class="col-md-6">
-				<h2 class="text-center">
-					<strong>
-						Le pitch		
-					</strong>
-				</h2>
-				<hr>
-					<%= markdown(@project.pitch) %>
-			</div>
-			<div class="col-md-6">
-				<h2 class="text-center">
-					<strong>
-						La description		
-					</strong>
-				</h2>
-				<hr>
-					<%= markdown(@project.description) %>
-			</div>
+			<%= render 'projects/partials/project_body' %>
 		</div>
-
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 my-3">
-					<h3 class="text-center my-3">
-						<strong>
-							Inscriptions 
-							<span class="badge badge-pill badge-info">
-								<%= @project.users.count %>
-							</span> 
-						</strong>
-					</h3>
-
-						<div class="container">
-			<div class="row">
-				<div class="col-md-12 my-3">
-				<% unless @project.users.include? current_user %>
-					<%= form_tag(project_registration_path) do %>
-						<%= submit_tag("Register to project", class: 'btn btn-block btn-primary') %>
-						<% end %>
-					<% else %>
-						<% if current_user.id == @project.user_id %>
-									<span class="btn btn-block btn-outline-primary">
-									En tant que créateur du projet vous devez participer
-								</span>
-						<% else %>
-					<%= form_tag(project_unregister_path) do %>
-						<%= submit_tag("Unregister from project", class: 'btn btn-block btn-danger') %>
-						<% end %>
-					<% end %>
-					<% end %>
+					<%= render 'projects/partials/project_registration_count' %>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 my-3">
+							<%= render 'projects/partials/registration_button' %>
+						</div>
 					</div>
+				</div>	
+					<%= render 'projects/partials/user_registration_table' %>
 			</div>
-		</div>	
-
-							<table class="table table-hover">
-							  <thead>
-							    <tr>
-										<th scope="col">#</th>
-							      <th scope="col">Prénom</th>
-							      <th scope="col">Nom</th>
-							      <th scope="col">Email</th>
-							      <% if current_user.id == @project.user_id %>
-											<th scope="col">Action</th>
-							      <% end %>
-							    </tr>
-							  </thead>
-							  <tbody>
-							  <% @project.users.each_with_index do |user, index| %> 
-							    <tr class="table-default">
-							      <th scope="row"><%= index += 1 %></th>
-							      <td><%= user.first_name.capitalize! %></td>
-							      <td><%= user.last_name.capitalize! %></td>
-							      <td><%= user.email %></td>
-							       <% if current_user.id == @project.user_id %>
-							    		  <td>
-			    		  					<%= form_tag(project_creator_unregister_user_path) do %>
-			    		  					<%= hidden_field_tag "user_id", "#{user.id}" %>
-														<%= submit_tag("Unregister user from project", class: 'btn btn-block btn-outline-danger') %>
-														<% end %>
-							    		  </td>
-							       <% end %>
-							    </tr>
-							    <% end %> 
-							    </tbody>
-							</table> 
-					</div>
-				</div>
-			</div>	
-
-
-<%= render partial: "comments/template", locals: {commentable: @project, new_comment: @comment} %> 
-
-			<div class="card card-outline-primary mb-3 text-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote my-3">
-      <div class="gravatar text-center">
-      		<%= gravatar_for @project.user, size: 80 %>
-      	</div>
-     		 <footer class="my-3">Project by: <cite title="Source Title">
-      	 <%= "#{@project.user.first_name.capitalize!} #{@project.user.last_name.capitalize!}" %>   
-	      </cite>
-	   		 </footer>
-   		 </blockquote>
-       <% if user_signed_in? && current_user.id == @project.user_id %>
-      <a href="<%= edit_project_path(@project) %>" class="btn btn-md btn-outline-success float-left my-3" style="margin-left:15px;">Edit project</a>
-
-      <%= button_to "Delete", { action: "destroy", id: @project.id },
-                                method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-md btn-outline-danger float-right my-3 mr-3' %>
-
-      <% end %>
-  		</div>
 		</div>
+	</div>	
+	<%= render partial: "comments/template", locals: {commentable: @project, new_comment: @comment} %> 
+		<%= render 'projects/partials/project_creator_card' %>
 	</div>
 </div>
  

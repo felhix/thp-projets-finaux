@@ -27407,3 +27407,1069 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 219ms (Views: 203.8ms | ActiveRecord: 10.1ms)
 
 
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 13:17:14 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (1.8ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (3.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (1.8ms)
+  Rendered comments/_reply.html.erb (20.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (1.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (3.1ms)
+  Rendered comments/_reply.html.erb (42.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (10.9ms)
+  Rendered comments/_reply.html.erb (23.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  Rendered comments/_reply.html.erb (9.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  Rendered comments/_reply.html.erb (2.8ms)
+  Rendered comments/_reply.html.erb (21.6ms)
+  Rendered comments/_reply.html.erb (28.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (2.6ms)
+  Rendered comments/_reply.html.erb (42.8ms)
+  Rendered comments/_reply.html.erb (143.5ms)
+  Rendered comments/_template.html.erb (157.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (171.4ms)
+  Rendered includes/_head.html.erb (35.8ms)
+  Rendered includes/_main_navigation.html.erb (1.2ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 225ms (Views: 209.0ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 13:21:11 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (1.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (2.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (2.0ms)
+  Rendered comments/_reply.html.erb (15.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (3.8ms)
+  Rendered comments/_reply.html.erb (35.6ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  Rendered comments/_reply.html.erb (7.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (3.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  Rendered comments/_reply.html.erb (8.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  Rendered comments/_reply.html.erb (23.6ms)
+  Rendered comments/_reply.html.erb (28.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (2.2ms)
+  Rendered comments/_reply.html.erb (40.7ms)
+  Rendered comments/_reply.html.erb (117.4ms)
+  Rendered comments/_template.html.erb (129.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (142.6ms)
+  Rendered includes/_head.html.erb (35.6ms)
+  Rendered includes/_main_navigation.html.erb (2.3ms)
+  Rendered includes/_flash_messages.html.erb (8.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 206ms (Views: 191.0ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 13:22:06 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (2.2ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (1.9ms)
+  Rendered comments/_reply.html.erb (15.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (2.8ms)
+  Rendered comments/_reply.html.erb (35.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (2.6ms)
+  Rendered comments/_reply.html.erb (7.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (3.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (1.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (2.0ms)
+  Rendered comments/_reply.html.erb (10.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  Rendered comments/_reply.html.erb (3.3ms)
+  Rendered comments/_reply.html.erb (24.5ms)
+  Rendered comments/_reply.html.erb (29.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  Rendered comments/_reply.html.erb (43.4ms)
+  Rendered comments/_reply.html.erb (115.5ms)
+  Rendered comments/_template.html.erb (127.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (140.5ms)
+  Rendered includes/_head.html.erb (37.7ms)
+  Rendered includes/_main_navigation.html.erb (2.4ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 197ms (Views: 183.0ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 13:24:04 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (1.5ms)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (4.7ms)
+  Rendered comments/_reply.html.erb (17.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (2.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  Rendered comments/_reply.html.erb (36.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (1.5ms)
+  Rendered comments/_reply.html.erb (8.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (2.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (2.7ms)
+  Rendered comments/_reply.html.erb (14.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  Rendered comments/_reply.html.erb (12.8ms)
+  Rendered comments/_reply.html.erb (40.7ms)
+  Rendered comments/_reply.html.erb (47.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (3.2ms)
+  Rendered comments/_reply.html.erb (62.7ms)
+  Rendered comments/_reply.html.erb (139.5ms)
+  Rendered comments/_template.html.erb (149.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (166.7ms)
+  Rendered includes/_head.html.erb (40.6ms)
+  Rendered includes/_main_navigation.html.erb (2.5ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 225ms (Views: 207.1ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 13:25:06 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (3.7ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (1.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (2.2ms)
+  Rendered comments/_reply.html.erb (15.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (2.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (1.5ms)
+  Rendered comments/_reply.html.erb (34.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (2.4ms)
+  Rendered comments/_reply.html.erb (11.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (1.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (3.7ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (3.3ms)
+  Rendered comments/_reply.html.erb (10.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  Rendered comments/_reply.html.erb (23.0ms)
+  Rendered comments/_reply.html.erb (31.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (2.4ms)
+  Rendered comments/_reply.html.erb (41.4ms)
+  Rendered comments/_reply.html.erb (117.8ms)
+  Rendered comments/_template.html.erb (128.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (145.1ms)
+  Rendered includes/_head.html.erb (40.9ms)
+  Rendered includes/_main_navigation.html.erb (2.0ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 204ms (Views: 187.7ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 13:30:31 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (1.6ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (3.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (2.1ms)
+  Rendered comments/_reply.html.erb (19.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (2.5ms)
+  Rendered comments/_reply.html.erb (40.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (2.4ms)
+  Rendered comments/_reply.html.erb (9.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (2.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  Rendered comments/_reply.html.erb (8.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  Rendered comments/_reply.html.erb (4.3ms)
+  Rendered comments/_reply.html.erb (23.9ms)
+  Rendered comments/_reply.html.erb (29.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  Rendered comments/_reply.html.erb (47.2ms)
+  Rendered comments/_reply.html.erb (128.7ms)
+  Rendered comments/_template.html.erb (136.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (164.1ms)
+  Rendered includes/_head.html.erb (8306.4ms)
+  Rendered includes/_main_navigation.html.erb (1.5ms)
+  Rendered includes/_flash_messages.html.erb (1.3ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 8490ms (Views: 8473.2ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 13:31:01 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (2.0ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (2.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (1.9ms)
+  Rendered comments/_reply.html.erb (16.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (3.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (2.2ms)
+  Rendered comments/_reply.html.erb (36.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (2.1ms)
+  Rendered comments/_reply.html.erb (10.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (3.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (2.2ms)
+  Rendered comments/_reply.html.erb (7.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  Rendered comments/_reply.html.erb (1.9ms)
+  Rendered comments/_reply.html.erb (22.8ms)
+  Rendered comments/_reply.html.erb (28.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  Rendered comments/_reply.html.erb (48.6ms)
+  Rendered comments/_reply.html.erb (128.5ms)
+  Rendered comments/_template.html.erb (140.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (155.1ms)
+  Rendered includes/_head.html.erb (38.6ms)
+  Rendered includes/_main_navigation.html.erb (2.3ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 211ms (Views: 197.0ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2018-02-17 13:54:08 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eGdpGOtqvxndHuRXp3c4XphU63jqka+/jXswSBhEYHFhFQIftkHHyoU1FmWkTP4yoa1xVYtBQxXUB4L9RGVIbQ==", "comment"=>{"commentable_id"=>"2", "commentable_type"=>"Project", "comment_id"=>"76", "body"=>"### yo"}, "commit"=>"Post Reply"}
+  [1m[36mUser Load (88.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (11.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? ORDER BY "comments"."rgt" DESC LIMIT ?[0m  [["commentable_id", 2], ["commentable_type", "Project"], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ? [0m  [["id", 70], ["LIMIT", 1]]
+  [1m[35mSQL (51.0ms)[0m  [1m[32mINSERT INTO "comments" ("commentable_id", "commentable_type", "body", "user_id", "lft", "rgt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["commentable_id", 2], ["commentable_type", "Project"], ["body", "### yo"], ["user_id", 2], ["lft", 35], ["rgt", 36], ["created_at", "2018-02-17 12:54:08.867706"], ["updated_at", "2018-02-17 12:54:08.867706"]]
+  [1m[35m (94.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ? [0m  [["id", 77], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "comments" SET "lft" = CASE WHEN "lft" BETWEEN 29 AND 34 THEN "lft" + 36 - 34 WHEN "lft" BETWEEN 35 AND 36 THEN "lft" + 29 - 35 ELSE "lft" END, "rgt" = CASE WHEN "rgt" BETWEEN 29 AND 34 THEN "rgt" + 36 - 34 WHEN "rgt" BETWEEN 35 AND 36 THEN "rgt" + 29 - 35 ELSE "rgt" END, "parent_id" = CASE WHEN "id" = 77 THEN 76 ELSE "parent_id" END, updated_at = '2018-02-17 12:54:09.334035' WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" BETWEEN 29 AND 36 OR "comments"."rgt" BETWEEN 29 AND 36) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35m (253.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ? [0m  [["id", 76], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ? [0m  [["id", 77], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/project/2
+Completed 302 Found in 875ms (ActiveRecord: 501.1ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 13:54:09 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (1.8ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (1.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  Rendered comments/_reply.html.erb (11.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (1.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  Rendered comments/_reply.html.erb (29.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (2.5ms)
+  Rendered comments/_reply.html.erb (10.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (2.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (1.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (2.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (1.5ms)
+  Rendered comments/_reply.html.erb (8.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 77]]
+  Rendered comments/_reply.html.erb (2.1ms)
+  Rendered comments/_reply.html.erb (8.2ms)
+  Rendered comments/_reply.html.erb (30.9ms)
+  Rendered comments/_reply.html.erb (40.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (2.2ms)
+  Rendered comments/_reply.html.erb (53.8ms)
+  Rendered comments/_reply.html.erb (121.4ms)
+  Rendered comments/_template.html.erb (130.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (155.8ms)
+  Rendered includes/_head.html.erb (378.4ms)
+  Rendered includes/_main_navigation.html.erb (4.3ms)
+  Rendered includes/_flash_messages.html.erb (2.0ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 674ms (Views: 636.9ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 13:54:46 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (3.2ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (2.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (5.3ms)
+  Rendered comments/_reply.html.erb (22.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (2.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (2.3ms)
+  Rendered comments/_reply.html.erb (43.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (3.1ms)
+  Rendered comments/_reply.html.erb (10.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (2.2ms)
+  Rendered comments/_reply.html.erb (9.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 77]]
+  Rendered comments/_reply.html.erb (3.8ms)
+  Rendered comments/_reply.html.erb (8.9ms)
+  Rendered comments/_reply.html.erb (29.7ms)
+  Rendered comments/_reply.html.erb (37.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (3.2ms)
+  Rendered comments/_reply.html.erb (52.9ms)
+  Rendered comments/_reply.html.erb (136.7ms)
+  Rendered comments/_template.html.erb (147.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (166.2ms)
+  Rendered includes/_head.html.erb (34.9ms)
+  Rendered includes/_main_navigation.html.erb (2.1ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 220ms (Views: 201.3ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 14:07:50 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (1.4ms)
+  Rendered projects/partials/_project_body.html.erb (0.9ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/partials/_project_registration_count.html.erb (3.6ms)
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (6.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/partials/_user_registration_table.html.erb (2.9ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (3.3ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (3.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  Rendered comments/_reply.html.erb (19.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (2.7ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (1.9ms)
+  Rendered comments/_reply.html.erb (48.8ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (2.1ms)
+  Rendered comments/_reply.html.erb (12.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (3.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (1.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (3.1ms)
+  Rendered comments/_reply.html.erb (10.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 77]]
+  Rendered comments/_reply.html.erb (2.1ms)
+  Rendered comments/_reply.html.erb (8.9ms)
+  Rendered comments/_reply.html.erb (36.0ms)
+  Rendered comments/_reply.html.erb (40.9ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (4.7ms)
+  Rendered comments/_reply.html.erb (58.5ms)
+  Rendered comments/_reply.html.erb (151.3ms)
+  Rendered comments/_template.html.erb (163.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (3.8ms)
+  Rendered projects/show.html.erb within layouts/application (190.5ms)
+  Rendered includes/_head.html.erb (38.5ms)
+  Rendered includes/_main_navigation.html.erb (1.2ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 248ms (Views: 229.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 14:08:21 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (5.7ms)
+  Rendered projects/partials/_project_body.html.erb (0.9ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/partials/_project_registration_count.html.erb (7.3ms)
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (4.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/partials/_user_registration_table.html.erb (4.0ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (7.5ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (2.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (2.6ms)
+  Rendered comments/_reply.html.erb (22.0ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (5.4ms)
+  Rendered comments/_reply.html.erb (48.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (4.2ms)
+  Rendered comments/_reply.html.erb (13.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (5.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (2.3ms)
+  Rendered comments/_reply.html.erb (9.1ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 77]]
+  Rendered comments/_reply.html.erb (2.1ms)
+  Rendered comments/_reply.html.erb (8.1ms)
+  Rendered comments/_reply.html.erb (36.4ms)
+  Rendered comments/_reply.html.erb (44.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  Rendered comments/_reply.html.erb (66.3ms)
+  Rendered comments/_reply.html.erb (169.0ms)
+  Rendered comments/_template.html.erb (192.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (3.8ms)
+  Rendered projects/show.html.erb within layouts/application (235.1ms)
+  Rendered includes/_head.html.erb (46.9ms)
+  Rendered includes/_main_navigation.html.erb (5.1ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 307ms (Views: 284.8ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 14:08:44 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (0.4ms)
+  Rendered projects/partials/_project_body.html.erb (0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/partials/_project_registration_count.html.erb (2.6ms)
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (2.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/partials/_user_registration_table.html.erb (8.0ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (2.5ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (3.2ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (2.1ms)
+  Rendered comments/_reply.html.erb (15.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (1.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  Rendered comments/_reply.html.erb (31.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (2.6ms)
+  Rendered comments/_reply.html.erb (13.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (1.9ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (1.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (1.9ms)
+  Rendered comments/_reply.html.erb (6.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 77]]
+  Rendered comments/_reply.html.erb (5.5ms)
+  Rendered comments/_reply.html.erb (13.3ms)
+  Rendered comments/_reply.html.erb (28.7ms)
+  Rendered comments/_reply.html.erb (39.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (2.2ms)
+  Rendered comments/_reply.html.erb (52.3ms)
+  Rendered comments/_reply.html.erb (143.8ms)
+  Rendered comments/_template.html.erb (153.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (3.1ms)
+  Rendered projects/show.html.erb within layouts/application (180.5ms)
+  Rendered includes/_head.html.erb (37.7ms)
+  Rendered includes/_main_navigation.html.erb (2.9ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 234ms (Views: 219.1ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 14:09:18 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_title.html.erb (2.1ms)
+  Rendered projects/partials/_project_body.html.erb (0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/partials/_project_registration_count.html.erb (2.8ms)
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (3.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/partials/_user_registration_table.html.erb (5.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (1.9ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (2.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (2.6ms)
+  Rendered comments/_reply.html.erb (19.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (3.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  Rendered comments/_reply.html.erb (42.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (1.6ms)
+  Rendered comments/_reply.html.erb (11.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (1.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (2.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (2.4ms)
+  Rendered comments/_reply.html.erb (11.4ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 77]]
+  Rendered comments/_reply.html.erb (3.2ms)
+  Rendered comments/_reply.html.erb (11.2ms)
+  Rendered comments/_reply.html.erb (38.9ms)
+  Rendered comments/_reply.html.erb (47.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (2.4ms)
+  Rendered comments/_reply.html.erb (64.6ms)
+  Rendered comments/_reply.html.erb (151.0ms)
+  Rendered comments/_template.html.erb (160.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (5.9ms)
+  Rendered projects/show.html.erb within layouts/application (191.9ms)
+  Rendered includes/_head.html.erb (41.4ms)
+  Rendered includes/_main_navigation.html.erb (2.8ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 256ms (Views: 234.4ms | ActiveRecord: 12.2ms)
+
+
