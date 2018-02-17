@@ -2,12 +2,10 @@
   <div class="comments-show">
     <div class="comment">
       <p><%= comment.body %><br></p>
-      <small class="text-muted">
-      Commentaire il y à <%= time_ago_in_words(comment.created_at) %>
-      par <%= comment.user.first_name.capitalize! %> 
-    </small>
- 
-      
+        <small class="text-muted">
+        Commentaire il y à <%= time_ago_in_words(comment.created_at) %>
+        par <%= comment.user.first_name.capitalize! %> 
+      </small>
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading">
