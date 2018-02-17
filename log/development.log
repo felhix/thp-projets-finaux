@@ -28473,3 +28473,377 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 256ms (Views: 234.4ms | ActiveRecord: 12.2ms)
 
 
+Started GET "/project/2" for 127.0.0.1 at 2018-02-17 14:11:50 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (4.6ms)
+  Rendered projects/partials/_project_body.html.erb (0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/partials/_project_registration_count.html.erb (69.1ms)
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 2], ["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (14.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  Rendered projects/partials/_user_registration_table.html.erb (9.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (34.6ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 60]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 64]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 66]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 68]]
+  Rendered comments/_reply.html.erb (4.2ms)
+  Rendered comments/_reply.html.erb (17.4ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 67]]
+  Rendered comments/_reply.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 69]]
+  Rendered comments/_reply.html.erb (3.3ms)
+  Rendered comments/_reply.html.erb (44.3ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 61]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 65]]
+  Rendered comments/_reply.html.erb (3.7ms)
+  Rendered comments/_reply.html.erb (11.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 62]]
+  Rendered comments/_reply.html.erb (2.2ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 63]]
+  Rendered comments/_reply.html.erb (2.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 70]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 71]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 72]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 73]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 74]]
+  Rendered comments/_reply.html.erb (3.2ms)
+  Rendered comments/_reply.html.erb (12.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 76]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 77]]
+  Rendered comments/_reply.html.erb (4.7ms)
+  Rendered comments/_reply.html.erb (12.8ms)
+  Rendered comments/_reply.html.erb (39.7ms)
+  Rendered comments/_reply.html.erb (48.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 75]]
+  Rendered comments/_reply.html.erb (1.5ms)
+  Rendered comments/_reply.html.erb (61.1ms)
+  Rendered comments/_reply.html.erb (228.3ms)
+  Rendered comments/_template.html.erb (273.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (9.9ms)
+  Rendered projects/show.html.erb within layouts/application (391.4ms)
+  Rendered includes/_head.html.erb (1463.4ms)
+  Rendered includes/_main_navigation.html.erb (1.4ms)
+  Rendered includes/_flash_messages.html.erb (0.5ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 2107ms (Views: 1877.0ms | ActiveRecord: 15.9ms)
+
+
+Started DELETE "/projects/2" for 127.0.0.1 at 2018-02-17 14:16:50 +0100
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+WGOtKsigDCjtdRzVag/U0ok+0E4/oYyzlttQpETfqHgE+Wz9gn44/ueJkFWk/k/c91hbFkuapiXJ9/3zTJWvQ==", "id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ? [0m  [["id", 60], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" >= 1) AND ("comments"."lft" < 12) AND ("comments"."id" != 60)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "comments" SET "lft" = ("lft" - 12) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" > 12) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "comments" SET "rgt" = ("rgt" - 12) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."rgt" > 12) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 60]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ? [0m  [["id", 61], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" >= 1) AND ("comments"."lft" < 4) AND ("comments"."id" != 61)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mSQL (2.3ms)[0m  [1m[33mUPDATE "comments" SET "lft" = ("lft" - 4) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" > 4) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "comments" SET "rgt" = ("rgt" - 4) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."rgt" > 4) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 61]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ? [0m  [["id", 62], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" >= 1) AND ("comments"."lft" < 2) AND ("comments"."id" != 62)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "comments" SET "lft" = ("lft" - 2) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" > 2) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "comments" SET "rgt" = ("rgt" - 2) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."rgt" > 2) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 62]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ? [0m  [["id", 63], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" >= 1) AND ("comments"."lft" < 2) AND ("comments"."id" != 63)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "comments" SET "lft" = ("lft" - 2) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" > 2) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "comments" SET "rgt" = ("rgt" - 2) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."rgt" > 2) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 63]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ? [0m  [["id", 70], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" >= 1) AND ("comments"."lft" < 16) AND ("comments"."id" != 70)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "comments" SET "lft" = ("lft" - 16) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."lft" > 16) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "comments" SET "rgt" = ("rgt" - 16) WHERE "comments"."id" IN (SELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND ("comments"."rgt" > 16) ORDER BY "comments"."lft" ASC)[0m  [["commentable_id", 2], ["commentable_type", "Project"]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 70]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "projects_users" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 2]]
+  [1m[35m (95.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 193ms (ActiveRecord: 111.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 14:16:50 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered pages/home.html.erb within layouts/application (6.0ms)
+  Rendered includes/_head.html.erb (40.9ms)
+  Rendered includes/_main_navigation.html.erb (1.3ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 70ms (Views: 56.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/new/project" for 127.0.0.1 at 2018-02-17 14:16:57 +0100
+Processing by ProjectsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."title" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/partials/form/_form_for_project.html.erb (524.0ms)
+  Rendered projects/new.html.erb within layouts/application (526.4ms)
+Completed 401 Unauthorized in 551ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x000055854ed66ab8>:0x00007fdcc93a8100>):
+     9: 					Le nom, en max 50 caractères
+    10: 				</small>
+    11: 			</label>
+    12: 	 		<%= f.text_field :title, class: 'form-control', required: true %>
+    13: 	 	</div>
+    14: 
+    15: 	 		<div class="form-group">
+  
+app/views/projects/partials/form/_form_for_project.html.erb:12:in `_app_views_projects_partials_form__form_for_project_html_erb___1988595156987153305_70293122635580'
+app/views/projects/new.html.erb:12:in `block in _app_views_projects_new_html_erb__3638531329560965377_70293122796700'
+app/views/projects/new.html.erb:11:in `_app_views_projects_new_html_erb__3638531329560965377_70293122796700'
+Started GET "/new/project" for 127.0.0.1 at 2018-02-17 14:18:26 +0100
+Processing by ProjectsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."title" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/partials/form/_form_for_project.html.erb (517.0ms)
+  Rendered projects/new.html.erb within layouts/application (520.4ms)
+Completed 401 Unauthorized in 548ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x000055854ed66ab8>:0x00007fdcc9d7cc58>):
+     9: 					Le nom, en max 50 caractères
+    10: 				</small>
+    11: 			</label>
+    12: 	 		<%= f.text_field :title, class: 'form-control', required: true %>
+    13: 	 	</div>
+    14: 
+    15: 	 		<div class="form-group">
+  
+app/views/projects/partials/form/_form_for_project.html.erb:12:in `_app_views_projects_partials_form__form_for_project_html_erb___1988595156987153305_70293127911060'
+app/views/projects/new.html.erb:12:in `block in _app_views_projects_new_html_erb__3638531329560965377_70293127949120'
+app/views/projects/new.html.erb:11:in `_app_views_projects_new_html_erb__3638531329560965377_70293127949120'
+Started GET "/new/project" for 127.0.0.1 at 2018-02-17 14:19:14 +0100
+Processing by ProjectsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."title" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/partials/form/_form_for_project.html.erb (2.0ms)
+  Rendered projects/new.html.erb within layouts/application (6.3ms)
+  Rendered includes/_head.html.erb (49.6ms)
+  Rendered includes/_main_navigation.html.erb (2.9ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 91ms (Views: 70.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2018-02-17 14:19:26 +0100
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SJnQdEMfWVz79ynO+3ESvaUZmnJJBOIQsvCOMMoZ5mpR67tzHjQhj6Pc2/z4StTRnOAAXyjUDrrrjDyFljjOdg==", "project"=>{"title"=>"qdsfghj", "short_description"=>"sdfhg", "description"=>"dfsgh", "pitch"=>"sgdfgfdg"}, "commit"=>"Create project"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."title" = ? LIMIT ?[0m  [["title", "qdsfghj"], ["LIMIT", 1]]
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "projects" ("title", "description", "short_description", "pitch", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "qdsfghj"], ["description", "dfsgh"], ["short_description", "sdfhg"], ["pitch", "sgdfgfdg"], ["user_id", 2], ["created_at", "2018-02-17 13:19:26.700298"], ["updated_at", "2018-02-17 13:19:26.700298"]]
+  [1m[35m (303.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "projects_users" ("user_id", "project_id") VALUES (?, ?)[0m  [["user_id", 2], ["project_id", 3]]
+  [1m[35m (83.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/project/3
+Completed 302 Found in 418ms (ActiveRecord: 392.3ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 14:19:27 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (3.8ms)
+  Rendered projects/partials/_project_body.html.erb (0.6ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_project_registration_count.html.erb (3.2ms)
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 3], ["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (3.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_user_registration_table.html.erb (8.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (1.5ms)
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_reply.html.erb (1.8ms)
+  Rendered comments/_template.html.erb (8.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (3.4ms)
+  Rendered projects/show.html.erb within layouts/application (40.3ms)
+  Rendered includes/_head.html.erb (48.3ms)
+  Rendered includes/_main_navigation.html.erb (2.0ms)
+  Rendered includes/_flash_messages.html.erb (0.7ms)
+  Rendered includes/_footer.html.erb (0.3ms)
+Completed 200 OK in 105ms (Views: 96.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/comments" for 127.0.0.1 at 2018-02-17 14:19:33 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qti1iLnx9kFlKLe+7qdnOCxsiTE04exBubX5tPNMZNCzqt6P5NqOkj0DRYztnKFUFZUTHFUxAOvgyUsBr21MzA==", "comment"=>{"commentable_id"=>"3", "commentable_type"=>"Project", "body"=>"fgdg"}, "commit"=>"Comment"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? ORDER BY "comments"."rgt" DESC LIMIT ?[0m  [["commentable_id", 3], ["commentable_type", "Project"], ["LIMIT", 1]]
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? ORDER BY "comments"."rgt" DESC LIMIT ?[0m  [["commentable_id", 3], ["commentable_type", "Project"], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "comments" ("commentable_id", "commentable_type", "body", "user_id", "lft", "rgt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["commentable_id", 3], ["commentable_type", "Project"], ["body", "fgdg"], ["user_id", 2], ["lft", 1], ["rgt", 2], ["created_at", "2018-02-17 13:19:33.545646"], ["updated_at", "2018-02-17 13:19:33.545646"]]
+  [1m[35m (72.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/project/3
+Completed 302 Found in 104ms (ActiveRecord: 76.2ms)
+
+
+Started GET "/project/3" for 127.0.0.1 at 2018-02-17 14:19:33 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/partials/_project_header.html.erb (4.5ms)
+  Rendered projects/partials/_project_body.html.erb (0.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_project_registration_count.html.erb (4.8ms)
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["project_id", 3], ["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_registration_button.html.erb (6.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "projects_users" ON "users"."id" = "projects_users"."user_id" WHERE "projects_users"."project_id" = ?[0m  [["project_id", 3]]
+  Rendered projects/partials/_user_registration_table.html.erb (3.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ?[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  Rendered comments/_form.html.erb (4.6ms)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? AND "comments"."parent_id" IS NULL[0m  [["commentable_id", 3], ["commentable_type", "Project"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ? ORDER BY "comments"."lft" ASC[0m  [["parent_id", 78]]
+  Rendered comments/_reply.html.erb (2.6ms)
+  Rendered comments/_reply.html.erb (16.2ms)
+  Rendered comments/_template.html.erb (31.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/partials/_project_creator_card.html.erb (4.2ms)
+  Rendered projects/show.html.erb within layouts/application (64.5ms)
+  Rendered includes/_head.html.erb (45.6ms)
+  Rendered includes/_main_navigation.html.erb (3.7ms)
+  Rendered includes/_flash_messages.html.erb (1.4ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 132ms (Views: 123.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/new/project" for 127.0.0.1 at 2018-02-17 14:20:00 +0100
+Processing by ProjectsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" WHERE "projects"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 14:20:00 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered pages/home.html.erb within layouts/application (10.9ms)
+  Rendered includes/_head.html.erb (54.9ms)
+  Rendered includes/_main_navigation.html.erb (3.3ms)
+  Rendered includes/_flash_messages.html.erb (0.8ms)
+  Rendered includes/_footer.html.erb (0.5ms)
+Completed 200 OK in 84ms (Views: 79.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 14:20:01 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered pages/home.html.erb within layouts/application (8.8ms)
+  Rendered includes/_head.html.erb (38.1ms)
+  Rendered includes/_main_navigation.html.erb (1.5ms)
+  Rendered includes/_flash_messages.html.erb (0.9ms)
+  Rendered includes/_footer.html.erb (1.0ms)
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-17 14:20:42 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Project Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered pages/home.html.erb within layouts/application (8.9ms)
+  Rendered includes/_head.html.erb (37.7ms)
+  Rendered includes/_main_navigation.html.erb (3.4ms)
+  Rendered includes/_flash_messages.html.erb (0.6ms)
+  Rendered includes/_footer.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 57.1ms | ActiveRecord: 1.4ms)
+
+
