@@ -1,7 +1,10 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
+  $date_deadline = DateValidation.last
+  $message_deadline = 'La deadline est passée'
 
   def create
+    if datetimevalidator($date_deadline)
     commentable = commentable_type.constantize.find(commentable_id)
     @comment = Comment.build_from(commentable, current_user.id, body)
 
@@ -13,13 +16,20 @@ class CommentsController < ApplicationController
         flash.now[:danger] = @comment.errors.full_messages.to_sentence
         redirect_back(fallback_location: root_path)
       end 
+      else
+      flash.now[:danger] = $message_deadline
+      redirect_back(fallback_location: root_path)
+    end
   end
   
   def destroy
+    if datetimevalidator($date_deadline)
     @comment = Comment.find(params[:id])
     @comment.destroy
     respond_to do |format|
 		  format.js { flash.now[:success] = "Comment deleted" }
+    end
+
     end
   end
 
