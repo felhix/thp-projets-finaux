@@ -18,8 +18,9 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    flash[:success] = "Comment was successfully deleted !"
-    redirect_back(fallback_location: root_path)
+    respond_to do |format|
+		  format.js { flash.now[:success] = "Comment deleted" }
+    end
   end
 
 
