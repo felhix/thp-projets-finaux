@@ -170,8 +170,21 @@ label .help {
   margin-left: 25px;
 }
 
+.card-text {
+  font-weight: 600;
+  color: #fff;
+}
 
+.bg-wow {
+  background-color: rgba(0, 0, 0, 0.77)!important;
+  font-weight: 600!important;
+  color: #fff!important;
+      margin-bottom: 50px;
+}
 
+#home-card-header {
+  background-color: transparent!important;
+}
 
  @media (min-width: 992px) {
   body {
