@@ -1,16 +1,4 @@
-<% comments.each do |comment| %>  
-  <div class="comments-show" id="comment_<%= comment.id %>">
-    <div class="comment">
-      <p><%= comment.body %><br></p>
-        <small class="text-muted">
-        Commentaire il y à <%= time_ago_in_words(comment.created_at) %>
-        par <%= comment.user.first_name.capitalize! %> 
-      </small>
-      <% if current_user.id == comment.user.id %>
-        <%= link_to "Delete", comment_path(comment),remote: true,
-                        method: :delete, data: { confirm: "Are you sure?" }, class: 'nested-form' %> 
-        <% end %>                
-        <div class="panel-group">
+<div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading">
               <h4 class="panel-title">
@@ -19,7 +7,7 @@
             </div>
             <div id="collapse_<%= comment.id %>" class="panel-collapse collapse">
               <div class="reply-form">
-                <%= form_with model: @new_comment do |f| %>
+                <%= form_for @new_comment do |f| %>
                   <%= f.hidden_field :commentable_id, value: @new_comment.commentable_id %>
                   <%= f.hidden_field :commentable_type, value: @new_comment.commentable_type %>
                   <%= f.hidden_field :comment_id, value: comment.id %>
@@ -35,9 +23,5 @@
             <hr>
             <%= render partial: "comments/reply", locals: {comments: comment.children} %>
           </div>
-        <% end %>  
-    </div>
-  </div>
-</div>
 
 

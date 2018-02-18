@@ -10,9 +10,9 @@ class CommentsController < ApplicationController
         flash[:success] = "Comment was successfully saved !"
         redirect_back(fallback_location: root_path)
       else
-        flash[:danger] = "Oops try again!"
+        flash.now[:danger] = @comment.errors.full_messages.to_sentence
         redirect_back(fallback_location: root_path)
-      end
+      end 
   end
   
   def destroy
