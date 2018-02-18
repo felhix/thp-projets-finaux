@@ -20,9 +20,11 @@
           <%= link_to "Login", new_user_session_path, class: 'nav-link' %>
          </li>
         <% else %>
+        <% if has_project?(current_user) %>
          <li class="nav-item">
           <%= link_to "New project", new_project_path, class: 'nav-link' %>
          </li>
+         <% end %>
          <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <%= current_user.email %>

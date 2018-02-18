@@ -50,4 +50,15 @@ module ApplicationHelper
     end 
   end 
 
+  def has_project?(user)
+      @projects = Project.all
+      @projects.each do |project|
+      if user.id != project.user_id
+        return true
+      else
+         return false
+      end   
+    end 
+  end
+
 end
