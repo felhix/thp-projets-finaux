@@ -6,9 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(email: "t@t.t", password: "foobar", password_confirmation: "foobar", first_name: "foo", last_name: "bar")
+u = User.create(email: "t@t.t", password: "foobar", password_confirmation: "foobar", first_name: "foo", last_name: "bar")
+#deadline passée
+DateValidation.create(project_lock: DateTime.new(2017, 8, 29, 22, 35, 0), session_name: "Session passee")
+#deadline session janvier 2018
+DateValidation.create(project_lock: DateTime.new(2018, 3, 1, 23, 59, 0), session_name: "Janvier 2018")
 
-1.times do
 	Project.create([
 			 title: 'Lorem ok dolor sit amet, consectetur cras amet.',
 			 short_description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...' ,
@@ -136,4 +139,3 @@ User.create(email: "t@t.t", password: "foobar", password_confirmation: "foobar",
 					",
 			 user_id: 1
 			])
-end
