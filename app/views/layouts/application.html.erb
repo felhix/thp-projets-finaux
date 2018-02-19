@@ -12,9 +12,10 @@
     <% end %>    
   	<%= render 'includes/main_navigation' %>
 
-  	<%= render 'includes/flash_messages' %>
     
   	<main role="main" class="main container">
+        	<%= render 'includes/flash_messages' %>
+
     	<%= yield %>
     </main>
 
