@@ -190,6 +190,62 @@ label .help {
   background-color: transparent!important;
 }
 
+
+.lsd-heart {
+  display: inline-block;
+  position: relative;
+  width: 37px;
+  height: 69px;
+  transform: rotate(45deg);
+  transform-origin: 32px 32px;
+}
+.lsd-heart span {
+  top: 60px;
+  left: 42px;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  animation: lsd-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.lsd-heart span:after,
+.lsd-heart span:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: red;
+}
+.lsd-heart span:before {
+  left: -10px;
+  border-radius: 50% 0 0 50%;
+}
+.lsd-heart span:after {
+  top: -10px;
+  border-radius: 50% 50% 0 0;
+}
+@keyframes lsd-heart {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
  @media (min-width: 992px) {
   body {
     padding-top: 56px;
