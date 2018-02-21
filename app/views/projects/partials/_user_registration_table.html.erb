@@ -17,16 +17,19 @@
       <td><%= user.first_name.capitalize! %></td>
       <td><%= user.last_name.capitalize! %></td>
       <td><%= user.email %></td>
+      <% unless @project.locked %>
        <% if current_user.id == @project.user_id %>
     		  <td>
+            <% if user.id == @project.user_id %>
+            <% else %>
   					<%= form_tag(project_creator_unregister_user_path) do %>
   					<%= hidden_field_tag "user_id", "#{user.id}" %>
-              <% unless current_user.id == @project.user_id %>
 							<%= submit_tag("Unregister user from project", class: 'btn btn-block btn-outline-danger') %>
-              <%end%>
 							<% end %>
-    		  </td>
-       <% end %>
+            <% end %>
+          </td>
+        <% end %>
+        <% end %>
     </tr>
     <% end %> 
     </tbody>

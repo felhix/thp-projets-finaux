@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 	$date_deadline = DateValidation.last
-	$message_deadline = "La deadline est passée!"
+	$message_deadline = "La deadline est passée ou le projet n'a pas ete valide par Fefep!"
 	$message_locked = "Le projet est verrouillé!"
 	#TODO
 	# add project creation and registion date limit 
@@ -144,8 +144,8 @@ class ProjectsController < ApplicationController
 	end 
 
 	def update_project_status
-		if datetimevalidator($date_deadline)
 			@project = find_project
+		if datetimevalidator($date_deadline) && @project.approved 
 			if @project.locked
 				@project.locked = false
 				@project.save

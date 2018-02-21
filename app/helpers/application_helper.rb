@@ -52,6 +52,21 @@ module ApplicationHelper
     end 
   end 
 
+  def home_page_is_locked?(project)
+    @projects = Project.all
+    @projects.each do |project|
+      if project.locked
+        return '<span class="badge badge-pill badge-primary" id="home-pill">
+                        <strong>Verrouillé</strong>
+                      </span>'.html_safe
+      else
+         return '<span class="badge badge-pill badge-danger" id="home-pill">
+                       <strong>Pas encore validé</strong>
+                      </span>'.html_safe
+      end  
+    end 
+  end
+
   def has_project?(user)
       @projects = Project.all
       @projects.each do |project|
