@@ -3,16 +3,19 @@
     <blockquote class="card-blockquote my-3">
       <div class="gravatar text-center">
       		<%= gravatar_for @project.user, size: 80 %>
-      	</div>
-     		 <footer class="my-3">Project by: <cite title="Source Title">
+      </div>
+     	<footer class="my-3">Project by: 
+        <cite title="Source Title">
       	 <%= "#{@project.user.first_name.capitalize!} #{@project.user.last_name.capitalize!}" %>   
 	      </cite>
-	   		 </footer>
-   		 </blockquote>
-       <% if current_user.id == @project.user_id %>
+	   	</footer>
+   	</blockquote>
+    <% if current_user.id == @project.user_id %>
+      <% unless @project.locked %>
       <a href="<%= edit_project_path(@project) %>" class="btn btn-md btn-outline-success float-left my-3" style="margin-left:15px;">Edit project</a>
       <%= button_to "Delete", { action: "destroy", id: @project.id },
                                 method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-md btn-outline-danger float-right my-3 mr-3' %>
-  <% end %>
+      <% end %>
+    <% end %>
 	</div>
 </div>

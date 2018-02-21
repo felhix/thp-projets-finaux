@@ -3,21 +3,21 @@
 		</span>
 <span class="float-right" id="big">
 	<% if current_user.id == @project.user_id %>
-	<% if @project.locked %>
-		<%= link_to lock_project_path, method: :post do %>
-    	<span class="badge badge-pill badge-primary float-right" id="status"><strong>Verrouillé</strong></span>
+		<% if @project.locked %>
+			<%= link_to lock_project_path, method: :post do %>
+    		<span class="badge badge-pill badge-primary float-right" id="status"><strong>Verrouillé</strong></span>
+			<% end %>
+		<% else %>
+			<%= link_to lock_project_path, method: :post do %>
+    		<span class="badge badge-pill badge-danger float-right" id="status"><strong>Pas encore verrouillé</strong></span>
+			<% end %>
 		<% end %>
-	<% else %>
-		<%= link_to lock_project_path, method: :post do %>
-    	<span class="badge badge-pill badge-danger float-right" id="status"><strong>Pas encore verrouillé</strong></span>
-		<% end %>
-	<% end %>
 	<%else %>
-	<% if @project.locked %>
-    <span class="badge badge-pill badge-primary float-right" id="status"><strong>Verrouillé</strong></span>
-	<% else %>
-    <span class="badge badge-pill badge-danger float-right" id="status"><strong>Pas encore verrouillé</strong></span>
-	<% end %>
+		<% if @project.locked %>
+    	<span class="badge badge-pill badge-primary float-right" id="status"><strong>Verrouillé</strong></span>
+		<% else %>
+   	 <span class="badge badge-pill badge-danger float-right" id="status"><strong>Pas encore verrouillé</strong></span>
+		<% end %>
 	<% end%>
 </span>
 		<div class="row">
