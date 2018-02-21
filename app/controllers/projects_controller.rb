@@ -1,5 +1,4 @@
 class ProjectsController < ApplicationController
-	$date_deadline = DateValidation.last
 	$message_deadline = "La deadline est passée ou le projet n'a pas ete valide par Fefep!"
 	$message_locked = "Le projet est verrouillé!"
 	#TODO
@@ -13,7 +12,7 @@ class ProjectsController < ApplicationController
 
 	def create
 		@project = current_user.build_project(project_params)
-		if datetimevalidator($date_deadline)
+		if datetimevalidator(DateValidation.last)
 			if @project.save
 				@project.users << current_user
 				flash[:success] = "Project was successfully saved !"
@@ -54,7 +53,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def update
-		if datetimevalidator($date_deadline)
+		if datetimevalidator(DateValidation.last)
 			if @project.locked
 				flash[:danger] = $message_locked
 				redirect_to show_project_path
@@ -74,7 +73,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def register
-		if datetimevalidator($date_deadline)
+		if datetimevalidator(DateValidation.last)
 			if @project.locked
 				flash[:danger] = $message_locked
 				redirect_to show_project_path
@@ -95,7 +94,7 @@ class ProjectsController < ApplicationController
 	end
 
 	def unregister
-		if datetimevalidator($date_deadline)
+		if datetimevalidator(DateValidation.last)
 			if @project.locked
 				flash[:danger] = $message_locked
 				redirect_to show_project_path
@@ -117,7 +116,7 @@ class ProjectsController < ApplicationController
 
 
 	def project_creator_unregister_user
-		if datetimevalidator($date_deadline)
+		if datetimevalidator(DateValidation.last)
 			if @project.locked
 				flash[:danger] = $message_locked
 				redirect_to show_project_path
@@ -145,7 +144,7 @@ class ProjectsController < ApplicationController
 
 	def update_project_status
 			@project = find_project
-		if datetimevalidator($date_deadline) && @project.approved 
+		if datetimevalidator(DateValidation.last) && @project.approved 
 			if @project.locked
 				@project.locked = false
 				@project.save

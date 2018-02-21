@@ -1,10 +1,9 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  $date_deadline = DateValidation.last
   $message_deadline = 'La deadline est passée'
 
   def create
-    if datetimevalidator($date_deadline)
+    if datetimevalidator(DateValidation.last)
     commentable = commentable_type.constantize.find(commentable_id)
     @comment = Comment.build_from(commentable, current_user.id, body)
 
@@ -23,7 +22,7 @@ class CommentsController < ApplicationController
   end
   
   def destroy
-    if datetimevalidator($date_deadline)
+    if datetimevalidator(DateValidation.last)
     @comment = Comment.find(params[:id])
     @comment.destroy
     respond_to do |format|
