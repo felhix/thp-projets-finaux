@@ -25,7 +25,7 @@ module ApplicationHelper
     @projects.each do |project|
       if project.approved
         return '<span class="badge badge-pill badge-success float-right" id="status">
-                        <strong>Validé</strong>
+                        <strong>Validé par Féfé</strong>
                       </span>'.html_safe
       else
          return '<span class="status badge badge-pill badge-warning float-right" id="status">

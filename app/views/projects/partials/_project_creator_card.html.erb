@@ -9,7 +9,7 @@
 	      </cite>
 	   		 </footer>
    		 </blockquote>
-       <% if user_signed_in? && current_user.id == @project.user_id %>
+       <% if current_user.id == @project.user_id %>
       <a href="<%= edit_project_path(@project) %>" class="btn btn-md btn-outline-success float-left my-3" style="margin-left:15px;">Edit project</a>
       <%= button_to "Delete", { action: "destroy", id: @project.id },
                                 method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-md btn-outline-danger float-right my-3 mr-3' %>

@@ -13,11 +13,11 @@ class CommentsController < ApplicationController
         flash[:success] = "Comment was successfully saved !"
         redirect_back(fallback_location: root_path)
       else
-        flash.now[:danger] = @comment.errors.full_messages.to_sentence
+        flash[:danger] = @comment.errors.full_messages.to_sentence
         redirect_back(fallback_location: root_path)
       end 
       else
-      flash.now[:danger] = $message_deadline
+      flash[:danger] = $message_deadline
       redirect_back(fallback_location: root_path)
     end
   end
