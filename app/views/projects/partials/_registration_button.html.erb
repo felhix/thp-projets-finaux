@@ -4,9 +4,6 @@
 		<% end %>
 	<% else %>
 		<% if current_user.id == @project.user_id %>
-					<span class="btn btn-block btn-outline-primary">
-					En tant que créateur du projet vous devez participer
-				</span>
 		<% else %>
 	<%= form_tag(project_unregister_path) do %>
 		<%= submit_tag("Unregister from project", class: 'btn btn-block btn-danger') %>

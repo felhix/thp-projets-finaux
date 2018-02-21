@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 	$date_deadline = DateValidation.last
 	$message_deadline = "La deadline est passée!"
+	$message_locked = "Le projet est verrouillé!"
 	#TODO
 	# add project creation and registion date limit 
 	# maybe add open/closed registration status
@@ -54,13 +55,18 @@ class ProjectsController < ApplicationController
 
 	def update
 		if datetimevalidator($date_deadline)
-			if @project.update(project_params)
-				flash[:success] = "Project was successfully updated !"
-				redirect_to root_path
+			if @project.locked
+				flash[:danger] = $message_locked
+				redirect_to show_project_path
 			else
-				flash.now[:danger] = @project.errors.full_messages.to_sentence
-				render 'edit'
-			end	
+				if @project.update(project_params)
+					flash[:success] = "Project was successfully updated !"
+					redirect_to root_path
+				else
+					flash.now[:danger] = @project.errors.full_messages.to_sentence
+					render 'edit'
+				end	
+			end
 		else
 			flash.now[:danger] = $message_deadline
 			render 'edit'
@@ -69,13 +75,18 @@ class ProjectsController < ApplicationController
 
 	def register
 		if datetimevalidator($date_deadline)
-			begin
-				@project.users << current_user
-				flash[:success] = "Vous participez à #{@project.title} !" 
+			if @project.locked
+				flash[:danger] = $message_locked
 				redirect_to show_project_path
-			rescue
-				flash[:danger] = "Oops veuillez réessayer !" 
-				redirect_to show_project_path		  
+			else
+				begin
+					@project.users << current_user
+					flash[:success] = "Vous participez à #{@project.title} !" 
+					redirect_to show_project_path
+				rescue
+					flash[:danger] = "Oops veuillez réessayer !" 
+					redirect_to show_project_path		  
+				end
 			end
 		else
 			flash[:danger] = $message_deadline
@@ -85,14 +96,19 @@ class ProjectsController < ApplicationController
 
 	def unregister
 		if datetimevalidator($date_deadline)
-			begin
-				@project.users.destroy(current_user)
-				flash[:success] = "Vous ne participez plus à #{@project.title} !" 
+			if @project.locked
+				flash[:danger] = $message_locked
 				redirect_to show_project_path
-			rescue
-				flash[:danger] = "Oops veuillez réessayer !" 
-				redirect_to show_project_path		  
-			end 
+			else
+				begin
+					@project.users.destroy(current_user)
+					flash[:success] = "Vous ne participez plus à #{@project.title} !" 
+					redirect_to show_project_path
+				rescue
+					flash[:danger] = "Oops veuillez réessayer !" 
+					redirect_to show_project_path		  
+				end 
+			end
 		else
 			flash[:danger] = $message_deadline
 			redirect_to show_project_path
@@ -102,31 +118,58 @@ class ProjectsController < ApplicationController
 
 	def project_creator_unregister_user
 		if datetimevalidator($date_deadline)
-			begin
-				user = User.find(params[:user_id])
-				if user.id != @project.user_id
-					@project.users.destroy(user)
-					flash[:success] = "Vous avez désinscris #{user.first_name.capitalize!} !" 
-					redirect_to show_project_path
-				else 
-					flash[:danger] = "Vous ne pouvez pas vous désinscrire de votre projet !" 
-					redirect_to show_project_path
-				end	
-			rescue
-				flash[:danger] = "Oops veuillez réessayer !" 
-				redirect_to show_project_path		  
-			end 
+			if @project.locked
+				flash[:danger] = $message_locked
+				redirect_to show_project_path
+			else
+				begin
+					user = User.find(params[:user_id])
+					if user.id != @project.user_id
+						@project.users.destroy(user)
+						flash[:success] = "Vous avez désinscris #{user.first_name.capitalize!} !" 
+						redirect_to show_project_path
+					else 
+						flash[:danger] = "Vous ne pouvez pas vous désinscrire de votre projet !" 
+						redirect_to show_project_path
+					end	
+				rescue
+					flash[:danger] = "Oops veuillez réessayer !" 
+					redirect_to show_project_path		  
+				end 
+			end
 		else
 			flash[:danger] = $message_deadline
 			redirect_to show_project_path
 		end 
-	end  
+	end 
+
+	def update_project_status
+		if datetimevalidator($date_deadline)
+			@project = find_project
+			if @project.locked
+				@project.locked = false
+				@project.save
+				redirect_to show_project_path	
+			else
+				@project.locked = true
+				@project.save
+				redirect_to show_project_path	
+			end
+		else
+			flash[:danger] = $message_deadline
+			redirect_to show_project_path
+		end 		 
+	end 
 
 
 	private
 
 	def project_params
 		params.require(:project).permit(:title, :description, :short_description, :pitch, :user_id)
+	end
+
+	def project_status_params
+		parmas.require(:project).permit(:locked)
 	end
 
 	def find_project

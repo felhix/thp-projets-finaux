@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/project/:id', to: 'projects#show', as: 'show_project'
   get '/project/:id/edit', to: 'projects#edit', as: 'edit_project'
   patch '/projects/:id', to: 'projects#update', as: 'update_project'
+  post '/projects/:id', to: 'projects#update_project_status', as:'lock_project'
 
   post "project/registration/:id", to: "projects#register", as: 'project_registration'
   post "project/unregister/:id", to: "projects#unregister", as: 'project_unregister'

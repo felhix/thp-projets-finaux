@@ -21,7 +21,9 @@
     		  <td>
   					<%= form_tag(project_creator_unregister_user_path) do %>
   					<%= hidden_field_tag "user_id", "#{user.id}" %>
+              <% unless current_user.id == @project.user_id %>
 							<%= submit_tag("Unregister user from project", class: 'btn btn-block btn-outline-danger') %>
+              <%end%>
 							<% end %>
     		  </td>
        <% end %>

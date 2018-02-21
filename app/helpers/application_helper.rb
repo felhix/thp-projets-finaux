@@ -35,6 +35,8 @@ module ApplicationHelper
     end 
   end 
 
+  
+
   def home_page_is_approved?(project)
     @projects = Project.all
     @projects.each do |project|
