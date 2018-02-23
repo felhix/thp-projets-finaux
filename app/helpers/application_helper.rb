@@ -70,7 +70,7 @@ module ApplicationHelper
   def has_project?(user)
       @projects = Project.all
       @projects.each do |project|
-      if user.id != project.user_id
+      if user.id == project.user_id
         return true
       else
          return false
