@@ -20,7 +20,7 @@
           <%= link_to "Login", new_user_session_path, class: 'nav-link' %>
          </li>
         <% else %>
-        <% unless has_project?(current_user) %>
+        <% if has_project?(current_user) %>
          <li class="nav-item">
           <%= link_to "New project", new_project_path, class: 'nav-link' %>
          </li>
