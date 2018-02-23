@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-	$message_deadline = "La deadline est passée ou le projet n'a pas ete valide par Fefep!"
+	$message_deadline = "La deadline est passée ou le projet n'a pas ete valide par Féfé!"
 	$message_locked = "Le projet est verrouillé!"
 	#TODO
 	# add project creation and registion date limit 
