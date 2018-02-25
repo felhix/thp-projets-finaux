@@ -1,5 +1,5 @@
 <div class="col-md-12 my-3">
-<% if @projects %>
+<% if @projects.count > 0 %>
 <% @projects.each do |post| %>
     <div class="card border-primary mb-3 box" style="max-width: 15rem;">
     <div class="card-header">
