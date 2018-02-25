@@ -1,4 +1,5 @@
 <div class="col-md-12 my-3">
+<% if @projects %>
 <% @projects.each do |post| %>
     <div class="card border-primary mb-3 box" style="max-width: 15rem;">
     <div class="card-header">
@@ -32,5 +33,9 @@
       </a>
     </div>
   </div>  
+  <% else %>
+  <h1 class="text-center">
+    Il n'y à aucun projet pour l' instant.
+  </h1>
 <% end %>
 </div>
