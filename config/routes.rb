@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'pages#home'
 
@@ -16,5 +17,8 @@ Rails.application.routes.draw do
   post "project/unregister/:id/user/:id", to: "projects#project_creator_unregister_user", as: 'project_creator_unregister_user'
 
   resources :comments
+  
+  get 'visitor/index', to: 'visitor#index', as: 'index_visitor'
+  get 'visitor/show/:id', to: 'visitor#show', as: 'show_visitor'
 
 end

@@ -5,18 +5,16 @@
   
   </head>
 
-  <% if user_signed_in? %>
-    <body>
-  <% else %>
-    <body class="showcase">
-    <% end %>    
-  	<%= render 'includes/main_navigation' %>
+
+    <body>      
+  
+    <%= render 'includes/main_navigation' %>
 
     
-  	<main role="main" class="main container">
-        	<%= render 'includes/flash_messages' %>
+    <main role="main" class="main container">
+          <%= render 'includes/flash_messages' %>
 
-    	<%= yield %>
+      <%= yield %>
     </main>
 
     <%= render 'includes/footer' %>
