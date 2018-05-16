@@ -6,15 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-u = User.create(email: "t@t.t", password: "foobar", password_confirmation: "foobar", first_name: "foo", last_name: "bar")
-#deadline passée
-DateValidation.create(project_lock: DateTime.new(2017, 8, 29, 22, 35, 0), session_name: "Session passee")
+u = User.create(email: "t@t.t", password: "foobar", password_confirmation: "foobar", first_name: "Jean-Michel", last_name: "Exemple")
 #deadline session janvier 2018
-DateValidation.create(project_lock: DateTime.new(2018, 3, 1, 23, 59, 0), session_name: "Janvier 2018")
+DateValidation.create(project_lock: DateTime.new(2018, 5, 25, 0, 0, 0), session_name: "Avril 2018")
 
 	Project.create([
-			 title: 'Lorem ok dolor sit amet, consectetur cras amet.',
-			 short_description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...' ,
+			 title: 'Super Projet Exemple',
+			 short_description: 'Ce projet sert d\'exemple pour les projets de THP. Trop cool !',
 			 description: "
 						# Sine dedisset viso eadem contendere nurusque
 
@@ -137,5 +135,6 @@ DateValidation.create(project_lock: DateTime.new(2018, 3, 1, 23, 59, 0), session
 					efflant comis.
 
 					",
-			 user_id: 1
+			 user_id: 1,
+			 locked: true
 			])
