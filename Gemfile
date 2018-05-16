@@ -41,7 +41,7 @@ gem 'bootstrap'
 gem 'bootswatch'
 gem 'jquery-rails'
 gem 'redcarpet'
-gem 'acts_as_commentable_with_threading'  
+gem 'acts_as_commentable_with_threading'
 
 
 
